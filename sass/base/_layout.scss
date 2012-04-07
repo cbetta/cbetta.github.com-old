@@ -65,6 +65,7 @@ body {
       padding-right: $pad-wide;
     }
   }
+
   div.pagination {
     @extend .group;
     margin-left: $pad-min;
@@ -89,10 +90,94 @@ body {
   }
 }
 
+body#frontpage {
+  #content {
+    overflow: hidden;
+    > div, > article {
+      background: rgba(38, 26, 17, 1);
+
+
+      width: 100%;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+
+      .wrapper {
+        margin-bottom: 10px;
+        padding: 0px;
+        padding: 10px 10px;
+        float: left;
+        width: 90%;
+
+        color: #DDD7C7;
+
+        p {
+          padding: 0px;
+          margin: 0px;
+        }
+
+        header {
+          padding: 0px;
+          margin-bottom: 10px;
+          background: none;
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
+
+      @media only screen and (min-width: 685px) {
+        background: $frontpage-bg;
+        height: 483px;
+
+        .wrapper {
+          width: 200px;
+          margin-top: 50px;
+          padding: 40px 40px;
+          float: right;
+          background: rgba(38, 26, 17, 0.6);
+        }
+      }
+
+      @media only screen and (min-width: 890px) {
+        .wrapper {
+          width: 300px;
+        }
+      }
+
+      @media only screen and (min-width: 890px) {
+        .wrapper {
+          width: 400px;
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+
+  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
+    @extend .group;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media only screen and (min-width: 480px) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    @media only screen and (min-width: 768px) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    @media only screen and (min-width: 992px) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
 #content {
   overflow: hidden;
   > div, > article { width: 100%; }
 }
+
+
 
 aside.sidebar {
   float: none;

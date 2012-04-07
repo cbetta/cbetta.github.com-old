@@ -1,10 +1,13 @@
 ---
 layout: default
 sidebar: collapse
+header: false
+body_id: frontpage
 ---
 
 <div>
 <article role="article">
+  <div class='wrapper'>
   {% if page.title %}
   <header>
     <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
@@ -24,6 +27,7 @@ sidebar: collapse
       {% endunless %}
     </footer>
   {% endunless %}
+  </div>
 </article>
 {% if site.disqus_short_name and page.comments == true %}
   <section>
