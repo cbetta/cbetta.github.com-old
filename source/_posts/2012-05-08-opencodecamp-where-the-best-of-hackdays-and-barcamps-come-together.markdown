@@ -16,7 +16,7 @@ Read the full post and leave a comment if you want to get involved.
 
 ### Where did this come from?
 
-I love HackDays but I have some issues with where they are going as you may have noticed [here](http://blog.cristianobetta.com/2012/01/14/the-end-of-an-era/index.html), [here](http://127.0.0.1:4000/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/), and [here](http://hackdaymanifesto.com/). I also love BarCamps, having been to many and having organised a few, but I noticed that HackDays and BarCamps are diverging in purpose and format.
+I love HackDays but I have some issues with where they are going as you may have noticed [here](http://blog.cristianobetta.com/2012/01/14/the-end-of-an-era/index.html), [here](/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/), and [here](http://hackdaymanifesto.com/). I also love BarCamps, having been to many and having organised a few, but I noticed that HackDays and BarCamps are diverging in purpose and format.
 
 Our contact at [City University](http://www.city.ac.uk/) where we ran 2 BarCamps once described BarCamps as "free learning events". Anyone can come in and learn, and most people will do their best to teach others whatever knowledge they have. It brings together anyone interested enough in learning new things and with an open mind to share their own skills and knowledge in return.
 
