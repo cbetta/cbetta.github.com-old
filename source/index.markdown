@@ -8,4 +8,4 @@ footer: false
 hide_bio: true
 ---
 
-Web developer, designer, and all round geek. Works at [EmberAds](http://emberads.com), organises events at [Geeks of London](http://geeksoflondon.com). Likes to code in Ruby on Rails, Javascript, and HTML.
+London based software engineer, event organiser, and all round geek. Works at [EmberAds](http://emberads.com), organises events at [Geeks of London](http://geeksoflondon.com). Likes to code in Ruby, Javascript, and HTML.

@@ -21,6 +21,7 @@ categories: rails omniauth ruby
   &lt;%= check_box_tag :conditions %&gt;
 &lt;/div&gt;</code></pre></noscript></div>
 
+<!-- more -->
 
 <h2>Step 2 - app/views/identities/new.html.erb</h2>
 

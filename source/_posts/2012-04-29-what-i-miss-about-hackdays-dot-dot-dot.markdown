@@ -12,6 +12,8 @@ Since then we've come a long way; HackDays are no longer just organised by big o
 
 But lately I've been noticing a little trend. I was at [GameHack](http://www.gamehack.co.uk/) yesterday and I had come to have a fun weekend to play with some APIs, maybe play with some WebGL libraries, and get an idea of how game development works. I am not a game developer and don't intend to be one, but I always enjoy learning new things.
 
+<!-- more -->
+
 Much like the most recent [MusicHackDay](http://musichackday.org/) London though, GameHack was a lot more serious than I had anticipated. Where the first MusicHackDay was mainly web developers trying to explore music APIs, the latest one mainly had people from the (online) music industry participating in teams, working with APIs and technologies they were already well practiced in.
 
 I felt out of my depth at MusicHackDay and GameHack. To clarify: I don't think this is their fault. The events are probably great for people from the relevant industries. So maybe I've fallen into the expectation that my existing skills will always get me somewhere at a HackDay, or maybe I'm disappointed that with all the skills I picked up since 2007 I'm still out of my depth when it comes to hardware, music, video graphics, and many other skills.
