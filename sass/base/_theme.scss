@@ -80,6 +80,7 @@ html {
 body {
   > div {
     background: $sidebar-bg $noise-bg;
+    overflow: auto;
     border-bottom: 1px solid $page-border-bottom;
     > div {
       background: $main-bg $noise-bg;
