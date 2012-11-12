@@ -3,7 +3,7 @@ layout: post
 title: "OpenCodeCamp - Where the best of HackDays and BarCamps come together"
 date: 2012-05-08 12:18
 comments: true
-categories: events
+categories: events hackdays
 ---
 
 ### tl;dr

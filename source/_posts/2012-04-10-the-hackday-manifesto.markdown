@@ -3,7 +3,7 @@ layout: post
 title: "The Hack Day Manifesto"
 date: 2012-04-10 15:30
 comments: true
-categories: events
+categories: events hackdays
 ---
 
 One of my friends, [Dan](http://artisanofcode.com/), started a document called ["The Hack Day Manifesto"](http://hackdaymanifesto.com/) on the #GeeksOfLondon IRC channel a few days back. With the help of our community we managed to update it to a full document and it's now live.
