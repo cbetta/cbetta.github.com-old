@@ -43,4 +43,11 @@ $pre-bg: $base03 !default;
 $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
 
+code {
+ background-color: #F8F8FF;
+ padding: 3px 6px;
+ font-size: 0.8em;
+ color: #666;
+}
+
 
