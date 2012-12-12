@@ -15,7 +15,7 @@ categories: rails omniauth ruby
 
 <p>Add a checkbox to your form.</p>
 
-<div><script src='https://gist.github.com/2368233.js?file='></script>
+<div><script src='https://gist.github.com/2368233.js'></script>
 <noscript><pre><code>&lt;div class=&quot;field&quot;&gt;
   &lt;%= label_tag :conditions %&gt;&lt;br&gt;
   &lt;%= check_box_tag :conditions %&gt;
@@ -27,7 +27,7 @@ categories: rails omniauth ruby
 
 <p>Add a attribute to your identity model and check for it to be set.</p>
 
-<div><script src="https://gist.github.com/3859506.js?file=gistfile1.rb"></script>
+<div><script src="https://gist.github.com/3859506.js"></script>
 <noscript><pre><code>class Identity &lt; OmniAuth::Identity::Models::ActiveRecord
 
   ...
@@ -46,7 +46,7 @@ end</code></pre></noscript></div>
 
 <p>This is the one that took me the longest to figure out. You need to tell Omniauth Identity what fields to look for on signup.</p>
 
-<div><script src="https://gist.github.com/3859517.js?file=gistfile1.rb"></script>
+<div><script src="https://gist.github.com/3859517.js"></script>
 <noscript><pre><code>Rails.application.config.middleware.use OmniAuth::Builder do
   provider :identity, fields: [:email, :conditions]
 end</code></pre></noscript></div>
