@@ -12,3 +12,4 @@ London based software engineer, event organiser, and all round geek. Works at [E
 <br/>
 Appreciates web standards, continuous integration, distributed version control systems,
 test driven development, and good coffee.
+

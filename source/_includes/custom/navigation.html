@@ -1,4 +1,20 @@
-<ul class="main-navigation">
-  <li><a href="{{ root_url }}/">Blog</a></li>
-  <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
-</ul>
+<nav role="navigation">
+  {% unless page.header == false %}
+  <form action="{{ site.simple_search }}" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    </fieldset>
+  </form>
+  {% endunless %}
+
+  <ul class="main-navigation">
+    {% unless page.header == false %}
+    <li><a href='/'>Home</a></li>
+    {% endunless %}
+    <li><a target="_blank" href='http://www.linkedin.com/in/cbetta'>Resume</a></li>
+    <li><a href='/skills'>Skills</a></li>
+    <li><a href='/code'>Code</a></li>
+    <li><a href='/blog'>Blog</a></li>
+  </ul>
+</nav>

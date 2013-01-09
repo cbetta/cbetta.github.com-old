@@ -91,6 +91,7 @@ body {
 }
 
 body#frontpage {
+
   #content {
     overflow: hidden;
     > div, > article {
@@ -125,13 +126,36 @@ body#frontpage {
         }
       }
 
+      nav ul {
+        display: block;
+        overflow: auto;
+        float: left;
+        width: 90%;
+        margin: 0px;
+        list-style: none;
+        margin-top: 30px;
+
+        li {
+          float: left;
+          background-color: $link-color;
+          margin-right: 10px;
+          padding: 0px 5px;
+          border-bottom: 2px solid #ddd;
+
+          a {
+            color: #eee;
+            text-decoration: none;
+          }
+        }
+      }
+
       @media only screen and (min-width: 755px) {
         background: $frontpage-bg;
         height: 483px;
 
         .wrapper {
           width: 400px;
-          margin-top: 40px;
+          margin-top: 30px;
           padding: 40px 40px;
           float: right;
           background: rgba(139, 158, 165, 0.2);
@@ -147,7 +171,7 @@ body#frontpage {
       @media only screen and (min-width: 890px) {
         .wrapper {
           width: 400px;
-          margin-top: 60px;
+          margin-top: 40px;
         }
       }
     }
@@ -282,6 +306,6 @@ body.sidebar-footer {
 
 @if $indented-lists == false {
   @media only screen and (min-width: 768px) {
-    ul, ol { margin-left: 0; }
+    ul, ol { margin-left: 1em; }
   }
 }

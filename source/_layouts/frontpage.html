@@ -28,8 +28,11 @@ show_navigation: true
       {% endunless %}
     </footer>
   {% endunless %}
+
+  {% include custom/navigation.html %}
   </div>
 </article>
+
 {% if site.disqus_short_name and page.comments == true %}
   <section>
     <h1>Comments</h1>

@@ -4,18 +4,6 @@
   <p>London based software engineer, event organiser, and all round geek. Works at <a href='http://emberads.com'>EmberAds</a>, organises events at <a href='http://geeksoflondon.com'>Geeks of London</a>. Likes to code in Ruby, Javascript, and HTML.</p>
   {% endunless %}
 
-  {% if page.show_navigation %}
-  <h1>Navigation</h1>
-  <ul>
-    <li><a href='/blog'>Blog</a></li>
-    <li><a href='http://github.com/cbetta'>Github</a></li>
-    <li><a href='http://twitter.com/cbetta'>Twitter</a></li>
-    <li><a href='http://facebook.com/cbetta'>Facebook</a></li>
-    <li><a href='http://flickr.com/cristiano_betta'>Flickr</a></li>
-    <li><a href='mailto:hi@cristianobetta.com'>Contact</a></li>
-  </ul>
-  {% endif %}
-
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     {% for post in site.posts limit: site.recent_posts %}
@@ -24,4 +12,17 @@
       </li>
     {% endfor %}
   </ul>
+
+  {% if page.show_navigation %}
+  <h1>Links</h1>
+  <ul>
+    <li><a href='http://github.com/cbetta'>Github</a></li>
+    <li><a href='http://twitter.com/cbetta'>Twitter</a></li>
+    <li><a href='http://facebook.com/cbetta'>Facebook</a></li>
+    <li><a href='http://flickr.com/cristiano_betta'>Flickr</a></li>
+    <li><a href='mailto:hi@cristianobetta.com'>Contact</a></li>
+  </ul>
+  {% endif %}
+
+
 </section>

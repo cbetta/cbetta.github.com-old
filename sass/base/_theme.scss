@@ -23,13 +23,13 @@ $text-color-light: #aaa !default;
 $type-border: #ddd !default;
 
 /* Navigation */
-$nav-bg: #DED8CA !default;
-$nav-bg-front: #DED8CA;
-$nav-bg-back: #DED8CA;
+$nav-bg: #fff !default;
+$nav-bg-front: #aaa;
+$nav-bg-back: #ddd;
 $nav-color: darken($nav-bg, 38) !default;
 $nav-color-hover: darken($nav-color, 25) !default;
 $nav-placeholder: desaturate(darken($nav-bg, 10), 15) !default;
-$nav-border: darken($nav-bg, 10) !default;
+$nav-border: $nav-bg !default;
 $nav-border-top: lighten($nav-bg, 15) !default;
 $nav-border-bottom: darken($nav-bg, 25) !default;
 $nav-border-left: darken($nav-bg, 11) !default;
