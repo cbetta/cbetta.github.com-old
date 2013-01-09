@@ -12,7 +12,7 @@ More of my code can be found on [GitHub](https://github.com/cbetta).
 
 ## Trifle (Ruby Gem)
 
-[{% img left code/trifle.png 150 %}](https://rubygems.org/gems/trifle)
+[{% img left /code/trifle.png 150 %}](https://rubygems.org/gems/trifle)
 
 [Website](https://rubygems.org/gems/trifle) |
 [Source](https://github.com/EmberAds/trifle)
@@ -23,7 +23,7 @@ A super fast GeoIP country lookup in Redis using the GeoIP CSVs from [maxmind.co
 
 ## A mobile history of the world in 100 objects
 
-[{% img left code/ahotw.png 150 %}](http://ahotw.cgb.im)
+[{% img left /code/ahotw.png 150 %}](http://ahotw.cgb.im)
 
 [Website](http://ahotw.cgb.im) | [Source](https://github.com/cbetta/ahotw)
 
@@ -33,7 +33,7 @@ A mobile version of the History of the World in 100 Objects site. Build in Symfo
 
 ## Histogram Bookmarklet
 
-[{% img left code/histogram.png 150 %}](http://histogram.cgb.im)
+[{% img left /code/histogram.png 150 %}](http://histogram.cgb.im)
 
 [Website](http://histogram.cgb.im) | [Source](https://github.com/cbetta/histogram)
 
@@ -43,7 +43,7 @@ A bookmarklet and app that generates histograms for any photo on the web. Writte
 
 ## The HackDay Manifesto
 
-[{% img left code/manifesto.png 150 %}](http://hackdaymanifesto.com)
+[{% img left /code/manifesto.png 150 %}](http://hackdaymanifesto.com)
 
 [Website](http://hackdaymanifesto.com/) |
 [Source](https://github.com/hackdaymanifesto/hackdaymanifesto.github.com)
@@ -54,7 +54,7 @@ The HackDay Manifesto is a project set up by the Geeks of London community to he
 
 ## Super Simple Secret Santa Service
 
-[{% img left code/santa.png 150 %}](http://santa.cgb.im)
+[{% img left /code/santa.png 150 %}](http://santa.cgb.im)
 
 [Website](http://santa.cgb.im) |
 [Source](https://github.com/cbetta/santa)
