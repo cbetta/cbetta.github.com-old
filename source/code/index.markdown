@@ -10,6 +10,27 @@ A selection of my projects that I created, either for work, for hack days, or fo
 
 More of my code can be found on [GitHub](https://github.com/cbetta).
 
+## PayPal Wishlist (work)
+
+[{% img left /code/paypal.png 150 %}](https://paypal.com/)
+
+[Website](https://paypal.com/)
+
+The PayPal Wishlist web app was a marketing project by PayPal UK and PayPal NL, allowing anyone to specify their Christmas wish list and possibly win it entirely. Working with PayPal was a pleasure and dealing with the amazing amount of interest they generated, and the accompanied scaling issues, was extremely interesting.
+
+<div style='clear: both;' ></div>
+
+## CharityBox
+
+[{% img left /code/charitybox.png 150 %}](https://twitter.com/charityboxapp)
+
+[Twitter](https://twitter.com/charityboxapp) |
+[News article](http://blog.justgiving.com/community/charityhack-2010/)
+
+Winner of [CharityHack 2010](http://charityhack.org/). CharityBox is a browser extension and web app that allows anyone to raise money for their selected charities without having to spend any money. Currently being refactored for relaunch in 2013.
+
+<div style='clear: both;' ></div>
+
 ## Trifle (Ruby Gem)
 
 [{% img left /code/trifle.png 150 %}](https://rubygems.org/gems/trifle)

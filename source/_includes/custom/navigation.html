@@ -12,9 +12,10 @@
     {% unless page.header == false %}
     <li><a href='/'>Home</a></li>
     {% endunless %}
-    <li><a target="_blank" href='http://www.linkedin.com/in/cbetta'>Resume</a></li>
-    <li><a href='/skills'>Skills</a></li>
-    <li><a href='/code'>Code</a></li>
-    <li><a href='/blog'>Blog</a></li>
+    <li><a target="_blank" href='http://www.linkedin.com/in/cbetta'>CV</a></li>
+    <li><a href='/skills' class='{% active /skills %}'>Skills</a></li>
+    <li><a href='/code' class='{% active /code %}'>Code</a></li>
+    <li><a href='/blog' class='{% active /blog %}'>Blog</a></li>
+    <li><a href='mailto:hi@cristianobetta.com'>Contact</a></li>
   </ul>
 </nav>
