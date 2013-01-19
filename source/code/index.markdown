@@ -31,6 +31,17 @@ Winner of [CharityHack 2010](http://charityhack.org/). CharityBox is a browser e
 
 <div style='clear: both;' ></div>
 
+## Serialisable (JSON) Bloom Filter (Ruby Gem)
+
+[{% img left /code/json-bloomfilter.png 150 %}](https://rubygems.org/gems/json-bloomfilter)
+
+[Website](https://rubygems.org/gems/json-bloomfilter) |
+[Source](https://github.com/cbetta/json-bloomfilter)
+
+A bloom filter implementation in Ruby and Javascript that is serialisable to JSON and compatible between both languages. Very useful when needing to train a bloom filter in one language and using it in the other.
+
+<div style='clear: both;' ></div>
+
 ## Trifle (Ruby Gem)
 
 [{% img left /code/trifle.png 150 %}](https://rubygems.org/gems/trifle)
