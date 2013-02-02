@@ -6,7 +6,7 @@ comments: true
 categories: ruby gems
 ---
 
-In the light of the recent [Rubygems.org](http://rubygems.org) security compromise the community has been looking at ways to make Rubygems.org and Ruby gems in general more secure. The project is still ongoing and feel free to help us out on #rubygems.org on Freenode, but here is a highlight of some of the main issues.
+In the light of the recent [Rubygems.org](http://rubygems.org) security compromise the community has been looking at ways to make Rubygems.org and Ruby gems in general more secure. The project is still ongoing and feel free to help them out on #rubygems on Freenode, but here is a highlight of what I think are some of the main issues.
 
 Some of the issues highlighted here are taken from [Ben Smith's enlightening (but scary) talk at Aloha Ruby Conference](http://www.youtube.com/watch?v=z-5bO0Q1J9s).
 
