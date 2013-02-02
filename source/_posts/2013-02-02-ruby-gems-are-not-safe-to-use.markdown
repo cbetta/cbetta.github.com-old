@@ -38,13 +38,13 @@ Some parts of the current infrastructure are worrying.
 
 * **Secure developer's Rubygems.org credentials.** This is pretty simple. My ssh key has a passphrase on it and so should my Rubygems.org credentials. Stealing a rubygems.org API key is easy, using one that requires a passphrase a lot harder.
 
-* **Stop running code on gem install.** I totally see the need for having C extension in a Ruby gems, and those extensions need to be compiled, but we seriously need to find a way to compile C code without allowing for the arbitrary execution of code on install of a gem.
+* **Stop running code on gem install.** I totally see the need for having C extensions in a Ruby gems, and those extensions need to be compiled, but we seriously need to find a way to compile C code without allowing for the arbitrary execution of code on install of a gem.
 
 * **Automatically mirror gems and checksums.**  A system involving the automatic mirroring of gems and their checksums to other servers would definitely have made the verification of gems a lot easier in the last few days.
 
 * **Force signing of gems.** Yes, [you can sign your gems](http://docs.rubygems.org/read/chapter/21) but almost nobody does (and neither do I). Additionally it's a pain to force the usage of signed keys on the gem user's side, not to mention the futility as most gems aren't signed. Signing is the way to go though and work on this has started. It's a difficult topic though and work is being done to make it as painless as possible for users and developers.
 
-* **Update gem users of unsigned/insecure gems.** The rubygem binary (together with tools like Bundler) should be updated to allow for verification of signatures which will allow it to notify gem users of unsigned or compromised gems.
+* **Notify gem users of unsigned/insecure gems.** The rubygem binary (together with tools like [Bundler](http://gembundler.com/)) should be updated to allow for verification of signatures which will allow it to notify gem users of unsigned or compromised gems.
 
 ## How can I help?
 
