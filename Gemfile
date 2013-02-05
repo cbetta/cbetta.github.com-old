@@ -10,7 +10,7 @@ group :development do
   gem 'haml', '>= 3.1'
   gem 'compass', '>= 0.11'
   gem 'rubypants'
-  gem 'rb-fsevent'
+  gem 'rb-inotify', '~> 0.8.8'
   gem 'stringex'
   gem 'liquid', '2.2.2'
 end
