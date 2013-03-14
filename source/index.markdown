@@ -8,7 +8,6 @@ footer: false
 hide_bio: true
 ---
 
-London based software engineer, event organiser, and all round geek. Organises events at [Geeks of London](http://geeksoflondon.com) and used to work at [EmberAds](http://emberads.com). Likes to code in Ruby, Javascript, and HTML.
+Developer Evangelist at [PayPal](http://paypal.com), event organiser at [Geeks of London](http://geeksoflondon.com). Board certified geek.
 <br/>
-Appreciates web standards, continuous integration, distributed version control systems,
-test driven development, and good coffee.
+Loves to code in Ruby, Rails and Javascript. Appreciates web standards, continuous integration, distributed version control systems, test driven development, and good coffee
