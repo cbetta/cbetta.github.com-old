@@ -10,4 +10,4 @@ hide_bio: true
 
 Developer Evangelist at [PayPal](http://paypal.com), event organiser at [Geeks of London](http://geeksoflondon.com). Board certified geek.
 <br/>
-Loves to code in Ruby, Rails and Javascript. Appreciates web standards, continuous integration, distributed version control systems, test driven development, and good coffee
+Loves to code in Ruby, Rails & JS. Appreciates web standards, continuous integration, distributed version control systems, test driven development, and coffee.
