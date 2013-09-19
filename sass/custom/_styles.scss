@@ -1,2 +1,20 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+#recent_posts a {
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+#recent_posts small {
+  color: #999;
+}
+
+#gh_repos li p {
+  color: #999;
+}
+
+#gh_repos a {
+  font-size: 1.1em;
+  text-decoration: none;
+}
