@@ -8,7 +8,8 @@
   <ul id="recent_posts">
     {% for post in site.posts limit: site.recent_posts %}
       <li class="post">
-        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a> <br>
+        <small>{{ post.date_formatted }}</small>
       </li>
     {% endfor %}
   </ul>
