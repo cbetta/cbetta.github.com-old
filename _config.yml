@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://cristianobetta.com
+url: http://cbetta.github.com
 title: "Cristiano Betta &middot; Blog"
 subtitle:
 main_title: Cristiano Betta
@@ -46,7 +46,7 @@ titlecase: false       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [custom/asides/recent_posts.html, asides/github.html,  asides/twitter.html]
+default_asides: [custom/asides/recent_posts.html, asides/github.html]
 # default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
 # sidebar: collapse
 
@@ -62,7 +62,7 @@ default_asides: [custom/asides/recent_posts.html, asides/github.html,  asides/tw
 
 # Github repositories
 github_user: cbetta
-github_repo_count: 5
+github_repo_count: 10
 github_show_profile_link: true
 github_skip_forks: true
 
