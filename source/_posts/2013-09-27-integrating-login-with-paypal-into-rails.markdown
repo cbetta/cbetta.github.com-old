@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Integrating Login With PayPal into Rails"
+title: "Integrating Log In With PayPal into Rails"
 date: 2013-09-27 12:00
 comments: true
 categories: ruby paypal login tutorial
 pusblished: false
 ---
 
-Earlier this year PayPal launched the new [Login With PayPal](https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/) experience worldwide. Integrating it into Rails is very straightforward with the help of [Omniauth](https://github.com/intridea/omniauth) so I thought I'd show how with a little tutorial.
+Earlier this year PayPal launched the new [Log In with PayPal](https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/) experience worldwide. Integrating it into Rails is very straightforward with the help of [Omniauth](https://github.com/intridea/omniauth) so I thought I'd show how with a little tutorial.
 
-**Login With PayPal** is much like **Login With Twitter** or **Login With Facebook** but it has the cool benefit of being able to provide you some extra user information like:
+**Log In With PayPal** is much like **Log In with Twitter** or **Log In with Facebook** but it has the cool benefit of being able to provide you some extra user information like:
 
 * A full street address
 * Gender
@@ -19,7 +19,7 @@ All the code for this tutorial is available on [Github](https://github.com/cbett
 
 ## Acquiring credentials
 
-**Login With PayPal** uses OAuth 2.0/OpenID Connect 1.0 and the full documentation can be found on the [PayPal developer portal](https://developer.paypal.com/). Because it's based on OAuth 2.0 we're going to have to get some OAuth credentials that we can use in our app.
+**Log In With PayPal** uses OAuth 2.0/OpenID Connect 1.0 and the full documentation can be found on the [PayPal developer portal](https://developer.paypal.com/). Because it's based on OAuth 2.0 we're going to have to get some OAuth credentials that we can use in our app.
 
 ### Creating an application profile
 
@@ -33,9 +33,9 @@ The developer portal doubles as the sandbox and application control panel. Head 
 
 Your app is now created and you can find your credentials under **Application Details**. Please note that there are 2 sets of credentials. Your live credentials can be used for actual payments and actual logins with real PayPal accounts. Your test credentials are there for using **sandbox accounts** (read fake/mock accounts) when in development.
 
-### Enabling Login With PayPal
+### Enabling Log In With PayPal
 
-We are going to have to enable Login With PayPal for our app.
+We are going to have to enable Log In With PayPal for our app.
 
 1. Scroll down to the bottom of your app details
 1. Flip the switch to turn **Log In With PayPal** to **ON**
@@ -48,7 +48,7 @@ Optionally you can now toggle **Accept Payments** to off if you don't intend to 
 
 ### Test accounts
 
-If you want to run Login With PayPal in sandbox (a.k.a. test) mode you will need to create some fake test accounts.
+If you want to run Log In With PayPal in sandbox (a.k.a. test) mode you will need to create some fake test accounts.
 
 1. Go to [developer.paypal.com](https://developer.paypal.com/) and login
 1. Go to [Applications](https://developer.paypal.com/webapps/developer/applications/myapps)
@@ -59,11 +59,11 @@ If you want to run Login With PayPal in sandbox (a.k.a. test) mode you will need
     1. Fill in a **password**. Pick something easy.
     1. Skip everything else and hit **Create Account** at the bottom of the page
 
-Using sandbox account for Login With PayPal is very useful as it allows you to login as different users. At no point should you be sharing your live PayPal username and password with other developers for testing.
+Using sandbox account for Log In With PayPal is very useful as it allows you to login as different users. At no point should you be sharing your live PayPal username and password with other developers for testing.
 
 ## Integration
 
-Assuming a plain Rails app adding Login With PayPal is now pretty straightforward.
+Assuming a plain Rails app adding Log In With PayPal is now pretty straightforward.
 
 ### Add omniauth
 
@@ -105,7 +105,7 @@ That's it! Most of my code can be seen on [Github](https://github.com/cbetta/log
 
 ### More user details
 
-Getting the user's UID is fun but rather limiting. Luckily Login With PayPal allows for a whole lot of [extra attributes](https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes) to be requested. By default you have access to all attributes in the `openid` [scope](https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes).
+Getting the user's UID is fun but rather limiting. Luckily Log In With PayPal allows for a whole lot of [extra attributes](https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes) to be requested. By default you have access to all attributes in the `openid` [scope](https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes).
 
 Let's change our code to also request the user's **name** and **email address**. If we look at the table we see that for this we need to add the `email` and `profile` scopes to our Omniauth configuration.
 
@@ -118,7 +118,7 @@ Please make sure **not to comma seperate the scopes** as this will cause issues 
 Secondly we need to update our application settings.
 
 1. Go back to our application details on [developer.paypal.com](http://developer.paypal.com)
-1. Scroll to the **Login With PayPal** settings at the bottom
+1. Scroll to the **Log In With PayPal** settings at the bottom
 1. Click **Customize** next to **Personal Information** and tick **Full name**
 1. Click **Customize** next to **Address Information** and tick **Email address**
 1. Scroll up a bit and save
