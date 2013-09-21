@@ -33,7 +33,7 @@ This is my humble equivalent of ["what's in your bag"](https://secure.flickr.com
 
 [{% img /skills/images/rails.png 50 %}](http://rubyonrails.org/)
 [{% img /skills/images/sinatra.png 50 %}](http://www.sinatra.com/)
-[{% img /skills/images/octopress.png 50 %}](http://octopress.org/)
+[{% img /skills/images/jekyllrb.png 50 %}](http://jekyllrb.com/)
 
 ### My server runs...
 
@@ -43,7 +43,6 @@ This is my humble equivalent of ["what's in your bag"](https://secure.flickr.com
 [{% img /skills/images/unicorn.png 50 %}](http://unicorn.bogomips.org/)
 [{% img /skills/images/varnish.png 50 %}](https://www.varnish-cache.org/)
 [{% img /skills/images/monit.png 50 %}](http://mmonit.com/monit/)
-[{% img /skills/images/puppet.png 50 %}](http://puppetlabs.com/)
 [{% img /skills/images/postgresql.png 50 %}](http://www.postgresql.org/)
 [{% img /skills/images/redis.png 50 %}](http://redis.io/)
 [{% img /skills/images/kimsufi.png 50 %}](http://kimsufi.co.uk/)
@@ -51,7 +50,7 @@ This is my humble equivalent of ["what's in your bag"](https://secure.flickr.com
 ### My workstation runs...
 
 [{% img /skills/images/osx.png 50 %}](https://www.apple.com/osx/)
-[{% img /skills/images/textmate.png 50 %}](http://macromates.com/)
+[{% img /skills/images/sublime.png 50 %}](http://macromates.com/)
 [{% img /skills/images/terminal.png 50 %}](https://github.com/robbyrussell/oh-my-zsh)
 [{% img /skills/images/dropbox.png 50 %}](https://www.dropbox.com/)
 [{% img /skills/images/photoshop.png 50 %}](http://www.photoshop.com/)
@@ -61,5 +60,4 @@ This is my humble equivalent of ["what's in your bag"](https://secure.flickr.com
 ### I communicate via...
 
 [{% img /skills/images/irc.png 50 %}](https://en.wikipedia.org/wiki/Internet_Relay_Chat)
-[{% img /skills/images/skype.png 50 %}](http://skype.com)
-[{% img /skills/images/campfire.png 50 %}](http://campfirenow.com/)
+[{% img /skills/images/imessages.png 50 %}](http://skype.com)
