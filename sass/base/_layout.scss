@@ -93,6 +93,11 @@ body {
 body#frontpage {
 
   #content {
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
     overflow: hidden;
     > div, > article {
       background: rgb(0, 2, 33);

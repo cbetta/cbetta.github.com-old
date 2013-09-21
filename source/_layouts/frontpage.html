@@ -9,13 +9,7 @@ show_navigation: true
 <div>
 <article role="article">
   <div class='wrapper'>
-  {% if page.title %}
-  <header>
-    <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
-    {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
-  </header>
-  {% endif %}
-  {{ content }}
+  {% include bio.html %}
   {% unless page.footer == false %}
     <footer>
       {% if page.date or page.author %}<p class="meta">
