@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Integrating Log In With PayPal into Rails"
-date: 2013-09-27 12:00
+date: 2013-09-23 12:00
 comments: true
 categories: ruby paypal login tutorial
 published: false
