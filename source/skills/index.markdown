@@ -50,7 +50,7 @@ This is my humble equivalent of ["what's in your bag"](https://secure.flickr.com
 ### My workstation runs...
 
 [{% img /skills/images/osx.png 50 %}](https://www.apple.com/osx/)
-[{% img /skills/images/sublime.png 50 %}](http://macromates.com/)
+[{% img /skills/images/sublime.png 50 %}](http://www.sublimetext.com/)
 [{% img /skills/images/terminal.png 50 %}](https://github.com/robbyrussell/oh-my-zsh)
 [{% img /skills/images/dropbox.png 50 %}](https://www.dropbox.com/)
 [{% img /skills/images/photoshop.png 50 %}](http://www.photoshop.com/)
