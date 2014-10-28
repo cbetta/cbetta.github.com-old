@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | Cristiano Betta &middot; Blog]]></title>
+  <link href="http://cristianobetta.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://cristianobetta.com/"/>
+  <updated>2014-08-15T11:41:48+01:00</updated>
+  <id>http://cristianobetta.com/</id>
+  <author>
+    <name><![CDATA[Cristiano Betta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Login with Slack as an Authorization Layer]]></title>
+    <link href="http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack/"/>
+    <updated>2014-08-15T11:38:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Your mini-Heroku with Dokku and Dokkufy]]></title>
+    <link href="http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
+    <updated>2014-08-05T22:16:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
+    <content type="html"><![CDATA[<p>I've always enjoyed <a href="http://heroku.com">Heroku</a> but there are plenty of reasons both monetary and practical not to use it. I always liked the deployment method through Git though.</p>
+
+<p>So this weekend at <a href="http://leedshack.org">LeedsHack</a> I started to look into <a href="https://github.com/progrium/dokku">Dokku</a>, an open source mini-Heroku powered by <a href="https://www.docker.com/">Docker</a>, <a href="https://github.com/progrium/buildstep">Buildstep</a> and some other bits that share infrastructure elements with Heroku.</p>
+
+<p>I found the installation rather tedious and as this was a hackathon I decided to create something simpler.</p>
+
+<h2>Introducing Dokkufy</h2>
+
+<p><a href="https://github.com/cbetta/dokkufy">Dokkufy</a> is a Ruby gem that makes it super simple to set up your own mini-Heroku on your own server.</p>
+
+<p>Simply install with a swift <code>gem install dokkufy</code> and you're ready to "dokkufy" both your server and your app.</p>
+
+<h3>Part 1: Dokkufying your server</h3>
+
+<p>Dokku only works with Ubuntu 12.04 and 14.04 server, so go get one of those images and boot up a server.</p>
+
+<p>Then on your local machine run:</p>
+
+<script src="https://gist.github.com/cbetta/995577526584091c1e31.js"></script>
+
+
+<p>As you can see this will ask you for a few details: server name or IP, username, and the eventual server domain to run all apps under. After a few minutes, depending on your broadband speeds, you will have a Dokku server ready do go.</p>
+
+<p>Open up your server's domain or IP in a browser and voila!</p>
+
+<p><img src="/images/blog/2014/nginx.png" alt="Nginx" /></p>
+
+<h3>Part 2a: Dokkufying your app</h3>
+
+<p>Now that we have a Dokku server ready to go it's time to prepare your app.</p>
+
+<p>I used the <a href="https://github.com/heroku/node-js-sample">Heroku Node JS sample app</a> for my example.</p>
+
+<script src="https://gist.github.com/cbetta/50149a1b60d47ba91f28.js"></script>
+
+
+<p>As you can see this simply asks for the details of your server and then adds a Git remote and writes a <code>.dokkurc</code> file to your app.</p>
+
+<p>Now do a <code>git push dokku master</code> and you will see your app deployed.</p>
+
+<script src="https://gist.github.com/cbetta/f5379254e1563f00c7ae.js"></script>
+
+
+<p>Dokku will automatically create your project for you on first push and deploy your app to a subdomain of your chosen domain. In this case we deployed our app to <a href="http://node-js-sample.ppd.io">http://node-js-sample.ppd.io</a>.</p>
+
+<h3>Part 2b: Controlling Dokku</h3>
+
+<p>When you install Dokku on your server it gives you some handy commands. Sadly to run those from your local machine you need to perform some ssh-fu.</p>
+
+<p>So to make this easier Dokkufy also comes with a local <code>dokku</code> command. You can use this command in any dokkufied app that has a <code>.dokkurc</code> file. It will automatically use that file to infer the remote server details and your app name.</p>
+
+<script src="https://gist.github.com/cbetta/b1ffe8aca4f571fbbd21.js"></script>
+
+
+<p>&nbsp;</p>
+
+<h3>Some final notes</h3>
+
+<p>That's it for Dokkufy. I recommend running <code>dokkufy help</code> to see how you can explore and install plugins to install things like Postgres, Redis, and other features on your machine.</p>
+
+<p>I also want to thank the awesome <a href="https://github.com/progrium">Jeff Lindsay</a> for his work on Dokku and I want to highlight what seems to be the next iteration of Dokku: <a href="https://flynn.io/">Flynn</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list - Week 40]]></title>
+    <link href="http://cristianobetta.com/blog/2013/10/05/reading-list-week-40/"/>
+    <updated>2013-10-05T17:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/10/05/reading-list-week-40</id>
+    <content type="html"><![CDATA[<h3><a href="http://github.com/ukiepc2013">UK IEPC 2013</a></h3>
+
+<p>I decided to drop by the <a href="http://www.cs.nott.ac.uk/~mlw/ukiepc/2013/">UKIEPC</a> at Nottingham University today and they offered me to enter as a visitor. I used to do these programming competitions when I was in uni with Melinda and Reinier (go Team OLF!) so it was a bit of nostalgia to be able to participate again. I ended up leading the board for a bit in Nottingham but eventually <a href="https://ukiepc13.contest.scrool.se/standings/">ended up 2nd, and 22nd on the UK standings</a>. Only downside: Ruby wasn't an allowed language so I had to brush up my Python skills.</p>
+
+<h3><a href="https://www.petekeen.net/dry-your-rails-crud-with-simple-form-and-inherited-resources">DRY up your CRUD</a></h3>
+
+<p>I really love the idea of the <a href="https://github.com/josevalim/inherited_resources">Inherited Resources</a> gem in this article to clean up standard CRUD code. I'm tempted to try this in a project I'm working on at the moment in combination with <a href="https://github.com/ryanb/cancan">cancan</a>.</p>
+
+<h3><a href="http://12factor.net/">The Twelve Factor App</a></h3>
+
+<p>I've been starting to get the hang of app deployment lately. I have access to the internal <a href="http://www.openstack.org/">OpenStack</a> platform at eBay and have written a few modules to handle deployment for my Rails apps. I keep going back to this site to challenge myself to answer the question: what would be the right way to do this?</p>
+
+<h3><a href="http://gistflow.com/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules">sandi_meter gem</a></h3>
+
+<p>Apparently Sandi Metz recently talked about her seemingly arbitrary but pretty sensible standards for maintaining clean, manageable and readable code. It's one of those basic heuristics that helps you identify code smell. It has now been turned into a gem by Anatoli Makarevich and will join my list of handy code sanitation tools.</p>
+
+<h3><a href="https://konklone.com/post/switch-to-https-now-for-free">Switch to HTTPS for free</a></h3>
+
+<p>Getting an SSL certificate can be expensive but apparently using <a href="https://www.startssl.com/">StartSSL</a> you can now get your own for free for personal use. Sadly <a href="http://pages.github.com/">Github pages</a> doesn't support SSL so I won't be switching this site any day soon, but I will keep it in mind if I ever change hosting.</p>
+
+<h3><a href="http://semantic-ui.com/">Semantic UI</a></h3>
+
+<p>I am not a great fan of Twitter Bootstrap. It somehow seems to breed divs and everything made in it looks like Twitter Bootstrap. This framework looks to be a bit cleaner and I like the look. Now don't all go use it or I will get sick of this one pretty quickly too.</p>
+
+<h3><a href="http://www.ruby.or.jp/en/news/20130924.html">ruby-lang.org design contest</a></h3>
+
+<p>I've never really liked the Ruby website (<a href="http://rubylang.org">ruby-lang.org</a>) so it is good to see a competition to find a new design. I'm not sure about the whole free labour implications in this but I think there are plenty of passionate Ruby devs wiling to put in an entry just to give back to the community.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Log In With PayPal into Rails]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
+    <updated>2013-09-27T08:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
+    <content type="html"><![CDATA[<p>Earlier this year PayPal launched the new <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/">Log In with PayPal</a> experience worldwide. Integrating it into Rails is very straightforward with the help of <a href="https://github.com/intridea/omniauth">Omniauth</a> so I thought I'd show how with a little tutorial.</p>
+
+<p><strong>Log In With PayPal</strong> is much like <strong>Log In with Twitter</strong> or <strong>Log In with Facebook</strong> but it has the cool benefit of being able to provide you some extra user information like:</p>
+
+<ul>
+<li>A full street address</li>
+<li>Gender</li>
+<li>Account verification status</li>
+</ul>
+
+
+<p>All the code for this tutorial is available on <a href="https://github.com/cbetta/login-with-paypal-demo-rails">Github</a>.</p>
+
+<h2>Acquiring credentials</h2>
+
+<p><strong>Log In With PayPal</strong> uses OAuth 2.0/OpenID Connect 1.0 and the full documentation can be found on the <a href="https://developer.paypal.com/">PayPal developer portal</a>. Because it's based on OAuth 2.0 we're going to have to get some OAuth credentials that we can use in our app.</p>
+
+<h3>Creating an application profile</h3>
+
+<p>The developer portal doubles as the sandbox and application control panel. Head over and login to get yourself some fresh credentials.</p>
+
+<ol>
+<li>Go to <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Login or signup and then login</li>
+<li>Go to <a href="https://developer.paypal.com/webapps/developer/applications/myapps">Applications</a></li>
+<li>Hit the <strong>Create application</strong> button</li>
+<li>Choose a name, leave the <strong>Integration type</strong> set to <strong>Web</strong></li>
+</ol>
+
+
+<p>Your app is now created and you can find your credentials under <strong>Application Details</strong>. Please note that there are 2 sets of credentials. Your live credentials can be used for actual payments and actual logins with real PayPal accounts. Your test credentials are there for using <strong>sandbox accounts</strong> (read fake/mock accounts) when in development.</p>
+
+<h3>Enabling Log In With PayPal</h3>
+
+<p>We are going to have to enable Log In With PayPal for our app.</p>
+
+<ol>
+<li>Scroll down to the bottom of your app details</li>
+<li>Flip the switch to turn <strong>Log In With PayPal</strong> to <strong>ON</strong></li>
+<li>Set the <strong>Return URL</strong> to <code>http://127.0.0.1:3000/auth/paypal/callback</code> (or something else if you don't run your Rails app like this)</li>
+<li>Click on <strong>Add a different return URL for test</strong> and also set that return URL.</li>
+<li>Set the privacy policy and agreement URLs to anything you want for now</li>
+<li>Scroll a bit back up and hit <strong>Save</strong></li>
+</ol>
+
+
+<p>Optionally you can now toggle <strong>Accept Payments</strong> to off if you don't intend to take payments with this app.</p>
+
+<h3>Test accounts</h3>
+
+<p>If you want to run Log In With PayPal in sandbox (a.k.a. test) mode you will need to create some fake test accounts.</p>
+
+<ol>
+<li>Go to <a href="https://developer.paypal.com/">developer.paypal.com</a> and login</li>
+<li>Go to <a href="https://developer.paypal.com/webapps/developer/applications/myapps">Applications</a></li>
+<li>On the left click on <a href="https://developer.paypal.com/webapps/developer/applications/accounts">Sandbox accounts</a></li>
+<li>Hit the <strong>Create Account</strong> button</li>
+<li>Unless you have any specific needs I advice you only fill in the following:
+
+<ol>
+<li>Fill in an <strong>email address</strong>. It has to be unique and not match any other live or sandbox email address. I generally pick one of my domains and do <strong>something@mydomain.com</strong>.</li>
+<li>Fill in a <strong>password</strong>. Pick something easy.</li>
+<li>Skip everything else and hit <strong>Create Account</strong> at the bottom of the page</li>
+</ol>
+</li>
+</ol>
+
+
+<p>Using sandbox account for Log In With PayPal is very useful as it allows you to login as different users. At no point should you be sharing your live PayPal username and password with other developers for testing.</p>
+
+<h2>Integration</h2>
+
+<p>Assuming a plain Rails app adding Log In With PayPal is now pretty straightforward.</p>
+
+<h3>Add omniauth</h3>
+
+<p>Add the omniauth gem to your <code>Gemfile</code> and bundle.</p>
+
+<script src="https://gist.github.com/cbetta/8b49e385cac9ad2aeb63.js"></script>
+
+
+<p>Now add the following snippet into <code>config/initializers/omniauth.rb</code>.</p>
+
+<script src="https://gist.github.com/cbetta/294896cd54c795b6e52c.js"></script>
+
+
+<p>Replace the <code>"AZj...yjx"</code> and <code>"EL4...Q3s"</code> with own API Client ID and Secret respectively. Also make sure to set the sandbox value to <code>false</code> when using your Live API credentials.</p>
+
+<h3>Handle login</h3>
+
+<p>Now that your app is setup and running visit <code>http://127.0.0.1:3000/auth/paypal</code> to start the login. Go try it and use that test account you just set up!</p>
+
+<p>You may notice that after the login the app will return back to your app on the <code>/auth/paypal/callback</code> path and then fail. This is because we still need to implement this functionality.</p>
+
+<p>We need to do 2 things. First we add a catch for this route in <code>config/routes.rb</code>.</p>
+
+<script src="https://gist.github.com/cbetta/bde3d873ba1be5d826fc.js"></script>
+
+
+<p>We then need to implement this action in <code>app/controllers/sessions_controller.rb</code> much like this:</p>
+
+<script src="https://gist.github.com/cbetta/b6b69d4fa07d5be6273f.js"></script>
+
+
+<p>The magic here is in the <code>request.env['omniauth.auth']</code> object, which is generated by Omniauth and will look something like this:</p>
+
+<script src="https://gist.github.com/cbetta/d8870bcb0736ca6d143f.js"></script>
+
+
+<p>You can use the <code>uid</code> to identify the user. I used it to find or create a <code>User</code> record, but you could also tie it to a different model. In my case I can then use the following to find the user:</p>
+
+<script src="https://gist.github.com/cbetta/fe53c8eaf482b4331bf1.js"></script>
+
+
+<h2>Advanced</h2>
+
+<p>That's it! Most of my code can be seen on <a href="https://github.com/cbetta/login-with-paypal-demo-rails">Github</a> and it includes a full login and logout. I want to highlight a few extra things though that are available to you that are pretty useful.</p>
+
+<h3>More user details</h3>
+
+<p>Getting the user's UID is fun but rather limiting. Luckily Log In With PayPal allows for a whole lot of <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes">extra attributes</a> to be requested. By default you have access to all attributes in the <code>openid</code> <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes">scope</a>.</p>
+
+<p>Let's change our code to also request the user's <strong>name</strong> and <strong>email address</strong>. If we look at the table we see that for this we need to add the <code>email</code> and <code>profile</code> scopes to our Omniauth configuration.</p>
+
+<p>The first step is to add these scopes to Omniauth:</p>
+
+<script src="https://gist.github.com/cbetta/5721d05a6d0432fce50c.js"></script>
+
+
+<p>Please make sure <strong>not to comma seperate the scopes</strong> as this will cause issues later.</p>
+
+<p>Secondly we need to update our application settings.</p>
+
+<ol>
+<li>Go back to our application details on <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Scroll to the <strong>Log In With PayPal</strong> settings at the bottom</li>
+<li>Click <strong>Customize</strong> next to <strong>Personal Information</strong> and tick <strong>Full name</strong></li>
+<li>Click <strong>Customize</strong> next to <strong>Address Information</strong> and tick <strong>Email address</strong></li>
+<li>Scroll up a bit and save</li>
+</ol>
+
+
+<p>Now if we try to login again we can access the user's extra details as follows:</p>
+
+<script src="https://gist.github.com/cbetta/a0a1f2894d98b312cfbc.js"></script>
+
+
+<h3>Omniauth test mode</h3>
+
+<p>Omniauth can be slow and especially in tests this can be frustrating. Luckily Omniauth has a <strong>test mode</strong> that allows you to skip the PayPal flow and just "pretend" like a user has logged in.</p>
+
+<p>Add the following to your <code>config/initializes/omniauth.rb</code>:</p>
+
+<script src="https://gist.github.com/cbetta/fbda182d6cdd5f1295e3.js"></script>
+
+
+<p>Your app will now skip the PayPal servers and login with the details from above. I use this a lot in my automatic tests.</p>
+
+<h2>Next</h2>
+
+<p>That's it for now but I will soon be doing a few more of these. I'm planning at least an overview of how to do this in Sinatra and I also want to demo how to use <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#seamlesscheckout">Seamless Checkout</a> on top of this tutorial.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list - Week 38]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/20/reading-list-week-38/"/>
+    <updated>2013-09-20T00:40:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/20/reading-list-week-38</id>
+    <content type="html"><![CDATA[<p>I thought I'd get back into blogging again so let's start with a simple reading list. Here's some articles that have kept me busy over the past week and I'd think people ight enjoy.</p>
+
+<ul>
+<li>Pete Keen has a short list of <a href="http://www.petekeen.net/essential-tools-for-starting-a-rails-app-in-2013">Essential Tools for Starting a Rails App in 2013</a>. I knew most of them but there were a few I didn't yet.</li>
+<li>Lindsey Bieda has a nice article explaining how to add a <a href="http://rarlindseysmash.com/posts/config-and-generators-in-gems">nice configuration method and generator</a> to your Ruby Gem. I need to add this to my next Gem.</li>
+<li>The great guys at GlobalDev are doing a series of RubyTips. As a big proponent for short, concise and well structured code I think there's a few amazing gems (no pun intended) in there. (<a href="http://globaldev.co.uk/2013/09/ruby-tips-part-1/">Part 1</a>, <a href="http://globaldev.co.uk/2013/09/ruby-tips-part-2/">Part 2</a>)</li>
+<li>My colleague Tim has been working on a series explaining how to use the new REST APIs in NodeJS. The firs 2 parts are available now (<a href="https://devblog.paypal.com/building-a-node-and-paypal-app/">Part 1</a>, <a href="https://devblog.paypal.com/building-a-web-app-with-node-js-the-paypal-sdk-part-2/">Part 2</a>). I need to do this myself to get the hang of NodeJS a bit more.</li>
+<li><a href="http://crystal-lang.org/">Crystal</a> is a Ruby-like language that compiles down to C. Sounds to good to be true and I need to play with this stat!</li>
+<li>There is now an app to teach you <a href="http://iconoclastlabs.github.io/rubytrivia/">arbitrary Ruby trivia</a>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

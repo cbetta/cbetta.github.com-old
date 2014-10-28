@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tutorial | Cristiano Betta &middot; Blog]]></title>
+  <link href="http://cristianobetta.com/blog/categories/tutorial/atom.xml" rel="self"/>
+  <link href="http://cristianobetta.com/"/>
+  <updated>2014-08-15T11:41:48+01:00</updated>
+  <id>http://cristianobetta.com/</id>
+  <author>
+    <name><![CDATA[Cristiano Betta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Log In With PayPal into Rails]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
+    <updated>2013-09-27T08:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
+    <content type="html"><![CDATA[<p>Earlier this year PayPal launched the new <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/">Log In with PayPal</a> experience worldwide. Integrating it into Rails is very straightforward with the help of <a href="https://github.com/intridea/omniauth">Omniauth</a> so I thought I'd show how with a little tutorial.</p>
+
+<p><strong>Log In With PayPal</strong> is much like <strong>Log In with Twitter</strong> or <strong>Log In with Facebook</strong> but it has the cool benefit of being able to provide you some extra user information like:</p>
+
+<ul>
+<li>A full street address</li>
+<li>Gender</li>
+<li>Account verification status</li>
+</ul>
+
+
+<p>All the code for this tutorial is available on <a href="https://github.com/cbetta/login-with-paypal-demo-rails">Github</a>.</p>
+
+<h2>Acquiring credentials</h2>
+
+<p><strong>Log In With PayPal</strong> uses OAuth 2.0/OpenID Connect 1.0 and the full documentation can be found on the <a href="https://developer.paypal.com/">PayPal developer portal</a>. Because it's based on OAuth 2.0 we're going to have to get some OAuth credentials that we can use in our app.</p>
+
+<h3>Creating an application profile</h3>
+
+<p>The developer portal doubles as the sandbox and application control panel. Head over and login to get yourself some fresh credentials.</p>
+
+<ol>
+<li>Go to <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Login or signup and then login</li>
+<li>Go to <a href="https://developer.paypal.com/webapps/developer/applications/myapps">Applications</a></li>
+<li>Hit the <strong>Create application</strong> button</li>
+<li>Choose a name, leave the <strong>Integration type</strong> set to <strong>Web</strong></li>
+</ol>
+
+
+<p>Your app is now created and you can find your credentials under <strong>Application Details</strong>. Please note that there are 2 sets of credentials. Your live credentials can be used for actual payments and actual logins with real PayPal accounts. Your test credentials are there for using <strong>sandbox accounts</strong> (read fake/mock accounts) when in development.</p>
+
+<h3>Enabling Log In With PayPal</h3>
+
+<p>We are going to have to enable Log In With PayPal for our app.</p>
+
+<ol>
+<li>Scroll down to the bottom of your app details</li>
+<li>Flip the switch to turn <strong>Log In With PayPal</strong> to <strong>ON</strong></li>
+<li>Set the <strong>Return URL</strong> to <code>http://127.0.0.1:3000/auth/paypal/callback</code> (or something else if you don't run your Rails app like this)</li>
+<li>Click on <strong>Add a different return URL for test</strong> and also set that return URL.</li>
+<li>Set the privacy policy and agreement URLs to anything you want for now</li>
+<li>Scroll a bit back up and hit <strong>Save</strong></li>
+</ol>
+
+
+<p>Optionally you can now toggle <strong>Accept Payments</strong> to off if you don't intend to take payments with this app.</p>
+
+<h3>Test accounts</h3>
+
+<p>If you want to run Log In With PayPal in sandbox (a.k.a. test) mode you will need to create some fake test accounts.</p>
+
+<ol>
+<li>Go to <a href="https://developer.paypal.com/">developer.paypal.com</a> and login</li>
+<li>Go to <a href="https://developer.paypal.com/webapps/developer/applications/myapps">Applications</a></li>
+<li>On the left click on <a href="https://developer.paypal.com/webapps/developer/applications/accounts">Sandbox accounts</a></li>
+<li>Hit the <strong>Create Account</strong> button</li>
+<li>Unless you have any specific needs I advice you only fill in the following:
+
+<ol>
+<li>Fill in an <strong>email address</strong>. It has to be unique and not match any other live or sandbox email address. I generally pick one of my domains and do <strong>something@mydomain.com</strong>.</li>
+<li>Fill in a <strong>password</strong>. Pick something easy.</li>
+<li>Skip everything else and hit <strong>Create Account</strong> at the bottom of the page</li>
+</ol>
+</li>
+</ol>
+
+
+<p>Using sandbox account for Log In With PayPal is very useful as it allows you to login as different users. At no point should you be sharing your live PayPal username and password with other developers for testing.</p>
+
+<h2>Integration</h2>
+
+<p>Assuming a plain Rails app adding Log In With PayPal is now pretty straightforward.</p>
+
+<h3>Add omniauth</h3>
+
+<p>Add the omniauth gem to your <code>Gemfile</code> and bundle.</p>
+
+<script src="https://gist.github.com/cbetta/8b49e385cac9ad2aeb63.js"></script>
+
+
+<p>Now add the following snippet into <code>config/initializers/omniauth.rb</code>.</p>
+
+<script src="https://gist.github.com/cbetta/294896cd54c795b6e52c.js"></script>
+
+
+<p>Replace the <code>"AZj...yjx"</code> and <code>"EL4...Q3s"</code> with own API Client ID and Secret respectively. Also make sure to set the sandbox value to <code>false</code> when using your Live API credentials.</p>
+
+<h3>Handle login</h3>
+
+<p>Now that your app is setup and running visit <code>http://127.0.0.1:3000/auth/paypal</code> to start the login. Go try it and use that test account you just set up!</p>
+
+<p>You may notice that after the login the app will return back to your app on the <code>/auth/paypal/callback</code> path and then fail. This is because we still need to implement this functionality.</p>
+
+<p>We need to do 2 things. First we add a catch for this route in <code>config/routes.rb</code>.</p>
+
+<script src="https://gist.github.com/cbetta/bde3d873ba1be5d826fc.js"></script>
+
+
+<p>We then need to implement this action in <code>app/controllers/sessions_controller.rb</code> much like this:</p>
+
+<script src="https://gist.github.com/cbetta/b6b69d4fa07d5be6273f.js"></script>
+
+
+<p>The magic here is in the <code>request.env['omniauth.auth']</code> object, which is generated by Omniauth and will look something like this:</p>
+
+<script src="https://gist.github.com/cbetta/d8870bcb0736ca6d143f.js"></script>
+
+
+<p>You can use the <code>uid</code> to identify the user. I used it to find or create a <code>User</code> record, but you could also tie it to a different model. In my case I can then use the following to find the user:</p>
+
+<script src="https://gist.github.com/cbetta/fe53c8eaf482b4331bf1.js"></script>
+
+
+<h2>Advanced</h2>
+
+<p>That's it! Most of my code can be seen on <a href="https://github.com/cbetta/login-with-paypal-demo-rails">Github</a> and it includes a full login and logout. I want to highlight a few extra things though that are available to you that are pretty useful.</p>
+
+<h3>More user details</h3>
+
+<p>Getting the user's UID is fun but rather limiting. Luckily Log In With PayPal allows for a whole lot of <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes">extra attributes</a> to be requested. By default you have access to all attributes in the <code>openid</code> <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes">scope</a>.</p>
+
+<p>Let's change our code to also request the user's <strong>name</strong> and <strong>email address</strong>. If we look at the table we see that for this we need to add the <code>email</code> and <code>profile</code> scopes to our Omniauth configuration.</p>
+
+<p>The first step is to add these scopes to Omniauth:</p>
+
+<script src="https://gist.github.com/cbetta/5721d05a6d0432fce50c.js"></script>
+
+
+<p>Please make sure <strong>not to comma seperate the scopes</strong> as this will cause issues later.</p>
+
+<p>Secondly we need to update our application settings.</p>
+
+<ol>
+<li>Go back to our application details on <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Scroll to the <strong>Log In With PayPal</strong> settings at the bottom</li>
+<li>Click <strong>Customize</strong> next to <strong>Personal Information</strong> and tick <strong>Full name</strong></li>
+<li>Click <strong>Customize</strong> next to <strong>Address Information</strong> and tick <strong>Email address</strong></li>
+<li>Scroll up a bit and save</li>
+</ol>
+
+
+<p>Now if we try to login again we can access the user's extra details as follows:</p>
+
+<script src="https://gist.github.com/cbetta/a0a1f2894d98b312cfbc.js"></script>
+
+
+<h3>Omniauth test mode</h3>
+
+<p>Omniauth can be slow and especially in tests this can be frustrating. Luckily Omniauth has a <strong>test mode</strong> that allows you to skip the PayPal flow and just "pretend" like a user has logged in.</p>
+
+<p>Add the following to your <code>config/initializes/omniauth.rb</code>:</p>
+
+<script src="https://gist.github.com/cbetta/fbda182d6cdd5f1295e3.js"></script>
+
+
+<p>Your app will now skip the PayPal servers and login with the details from above. I use this a lot in my automatic tests.</p>
+
+<h2>Next</h2>
+
+<p>That's it for now but I will soon be doing a few more of these. I'm planning at least an overview of how to do this in Sinatra and I also want to demo how to use <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#seamlesscheckout">Seamless Checkout</a> on top of this tutorial.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PayPal Seamless Checkout with Rails]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/25/paypal-seamless-checkout-with-rails/"/>
+    <updated>2013-09-25T12:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/25/paypal-seamless-checkout-with-rails</id>
+    <content type="html"><![CDATA[<p>Continuing from previous post.</p>
+
+<h1>Enable Seamless Checkout</h1>
+
+<ul>
+<li>Login to <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Go to <strong>Applications</strong></li>
+<li>Select your application from the list</li>
+<li>Scroll down to <strong>Login With PayPal</strong></li>
+<li>Check <strong>Use Seamless Checkout</strong></li>
+<li>Scroll back up and hit <strong>Save</strong></li>
+<li>Also make sure <strong>Accept Payments</strong> is turned on (we turned that off in the last post).</li>
+</ul>
+
+
+<h1>Update OmniAuth to use Seamless Checkout</h1>
+
+<p><code>ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :paypal, ... scope: "openid email profile https://uri.paypal.com/services/expresscheckout"
+end
+</code></p>
+
+<h1>Make a payment</h1>
+
+<p>Add the PayPal SDK to your Gemfile</p>
+
+<p><code>ruby
+gem 'paypal-sdk-rest'
+</code></p>
+
+<p>Now make a new initializer in <code>config/initializers/paypal.rb</code> to configure PayPal.</p>
+
+<p>```ruby
+PayPal::SDK::REST.set_config(</p>
+
+<pre><code>:mode =&gt; :sandbox,  # Set :sandbox or :live
+:client_id     =&gt; "CLIENT_ID",
+:client_secret =&gt; "CLIENT_SECRET" )
+</code></pre>
+
+<p>```</p>
+
+<p>Create a PaymentsController to prepare and setup the payment.</p>
+
+<p>```ruby</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

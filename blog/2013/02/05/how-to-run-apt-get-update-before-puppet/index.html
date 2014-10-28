@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Cristiano Betta  </title>
+  <title>How to run apt-get update before Puppet  &middot;  Cristiano Betta &middot; Blog</title>
   <meta name="author" content="Cristiano Betta">
 
   
-  <meta name="description" content="Cristiano Betta Developer Evangelist at PayPal, event organiser at Geeks of London. Board certified geek. Loves to code in Ruby, Rails &amp; JS. &hellip;">
+  <meta name="description" content="One of the problems I keep running into with Puppet is that the packages I&#8217;m trying to install are very new and I need to run apt-get update to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cristianobetta.com">
+  <link rel="canonical" href="http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -42,41 +42,142 @@
 
 </head>
 
-<body  id="frontpage"    class="collapse-sidebar sidebar-footer" >
+<body   >
   
-  <div id="main">
-    <div id="content">
-      <div>
-<article role="article">
-  <div class='wrapper'>
-  <h1>Cristiano Betta</h1>
-
-<p>Developer Evangelist at <a href="http://paypal.com">PayPal</a>, event organiser at <a href="http://geeksoflondon.com">Geeks of London</a>. Board certified geek.</p>
-
-<p>Loves to code in Ruby, Rails &amp; JS. Appreciates web standards, continuous integration, distributed version control systems, test driven development, and coffee.</p>
+    <header role="banner"><hgroup>
+  <h1><a href="/">Cristiano Betta</a></h1>
   
-
-  <nav role="navigation">
+</hgroup>
+</header>
+    <nav role="navigation">
+  
+  <form action="http://google.com/search" method="get" target="_blank">
+    <fieldset role="search">
+      <input type="hidden" name="q" value="site:cristianobetta.com" />
+      <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    </fieldset>
+  </form>
   
 
   <ul class="main-navigation">
     
+    <li><a href='/'>Home</a></li>
+    
     <li><a target="_blank" href='http://resume.linkedinlabs.com/tuzpn3khk'>CV</a></li>
     <li><a href='/skills' class=''>Skills</a></li>
     <li><a href='/code' class=''>Code</a></li>
-    <li><a href='/blog' class=''>Blog</a></li>
+    <li><a href='/blog' class='active'>Blog</a></li>
     <li><a href='mailto:hi@cristianobetta.com'>Contact</a></li>
   </ul>
 </nav>
-  </div>
+  
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to run apt-get update before Puppet</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-05T14:56:00+00:00" pubdate data-updated="true">Feb 5<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>One of the problems I keep running into with Puppet is that the packages I&#8217;m trying to install are very new and I need to run <code>apt-get update</code> to update the repositories. Because Puppet does not run scripts it gets rather annoying to get the update to run before you install any packages.</p>
+
+<p>I found a lot of solutions around the web but this one seems to work best for me.</p>
+
+<script src="https://gist.github.com/cbetta/4714469.js"></script>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Cristiano Betta</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-05T14:56:00+00:00" pubdate data-updated="true">Feb 5<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/puppet/'>puppet</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/" data-via="cbetta" data-counturl="http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/02/ruby-gems-are-not-safe-to-use/" title="Previous Post: Ruby gems are still not safe to use">&laquo; Ruby gems are still not safe to use</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/08/21/the-joy-and-pain-of-using-jekyll/" title="Next Post: The joy and pain of using Jekyll">The joy and pain of using Jekyll &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
 <aside class="sidebar">
   
     <section>
+  
+    <h1>Cristiano Betta</h1>
+
+<p>Developer Evangelist at <a href="http://paypal.com">PayPal</a>, event organiser at <a href="http://geeksoflondon.com">Geeks of London</a>. Board certified geek.</p>
+
+<p>Loves to code in Ruby, Rails &amp; JS. Appreciates web standards, continuous integration, distributed version control systems, test driven development, and coffee.</p>
   
 
   <h1>Recent Posts</h1>
@@ -187,6 +288,22 @@
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'bettacoding';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/';
+        var disqus_url = 'http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

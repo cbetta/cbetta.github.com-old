@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Cristiano Betta &middot; Blog]]></title>
+  <link href="http://cristianobetta.com/atom.xml" rel="self"/>
+  <link href="http://cristianobetta.com/"/>
+  <updated>2014-08-15T11:41:48+01:00</updated>
+  <id>http://cristianobetta.com/</id>
+  <author>
+    <name><![CDATA[Cristiano Betta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Login with Slack as an Authorization Layer]]></title>
+    <link href="http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack/"/>
+    <updated>2014-08-15T11:38:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Your mini-Heroku with Dokku and Dokkufy]]></title>
+    <link href="http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
+    <updated>2014-08-05T22:16:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve always enjoyed <a href="http://heroku.com">Heroku</a> but there are plenty of reasons both monetary and practical not to use it. I always liked the deployment method through Git though.</p>
+
+<p>So this weekend at <a href="http://leedshack.org">LeedsHack</a> I started to look into <a href="https://github.com/progrium/dokku">Dokku</a>, an open source mini-Heroku powered by <a href="https://www.docker.com/">Docker</a>, <a href="https://github.com/progrium/buildstep">Buildstep</a> and some other bits that share infrastructure elements with Heroku.</p>
+
+<p>I found the installation rather tedious and as this was a hackathon I decided to create something simpler.</p>
+
+<h2>Introducing Dokkufy</h2>
+
+<p><a href="https://github.com/cbetta/dokkufy">Dokkufy</a> is a Ruby gem that makes it super simple to set up your own mini-Heroku on your own server.</p>
+
+<p>Simply install with a swift <code>gem install dokkufy</code> and you&#8217;re ready to &#8220;dokkufy&#8221; both your server and your app.</p>
+
+<h3>Part 1: Dokkufying your server</h3>
+
+<p>Dokku only works with Ubuntu 12.04 and 14.04 server, so go get one of those images and boot up a server.</p>
+
+<p>Then on your local machine run:</p>
+
+<script src="https://gist.github.com/cbetta/995577526584091c1e31.js"></script>
+
+
+<p>As you can see this will ask you for a few details: server name or IP, username, and the eventual server domain to run all apps under. After a few minutes, depending on your broadband speeds, you will have a Dokku server ready do go.</p>
+
+<p>Open up your server&#8217;s domain or IP in a browser and voila!</p>
+
+<p><img src="http://cristianobetta.com/images/blog/2014/nginx.png" alt="Nginx" /></p>
+
+<h3>Part 2a: Dokkufying your app</h3>
+
+<p>Now that we have a Dokku server ready to go it&#8217;s time to prepare your app.</p>
+
+<p>I used the <a href="https://github.com/heroku/node-js-sample">Heroku Node JS sample app</a> for my example.</p>
+
+<script src="https://gist.github.com/cbetta/50149a1b60d47ba91f28.js"></script>
+
+
+<p>As you can see this simply asks for the details of your server and then adds a Git remote and writes a <code>.dokkurc</code> file to your app.</p>
+
+<p>Now do a <code>git push dokku master</code> and you will see your app deployed.</p>
+
+<script src="https://gist.github.com/cbetta/f5379254e1563f00c7ae.js"></script>
+
+
+<p>Dokku will automatically create your project for you on first push and deploy your app to a subdomain of your chosen domain. In this case we deployed our app to <a href="http://node-js-sample.ppd.io">http://node-js-sample.ppd.io</a>.</p>
+
+<h3>Part 2b: Controlling Dokku</h3>
+
+<p>When you install Dokku on your server it gives you some handy commands. Sadly to run those from your local machine you need to perform some ssh-fu.</p>
+
+<p>So to make this easier Dokkufy also comes with a local <code>dokku</code> command. You can use this command in any dokkufied app that has a <code>.dokkurc</code> file. It will automatically use that file to infer the remote server details and your app name.</p>
+
+<script src="https://gist.github.com/cbetta/b1ffe8aca4f571fbbd21.js"></script>
+
+
+<p>&nbsp;</p>
+
+<h3>Some final notes</h3>
+
+<p>That&#8217;s it for Dokkufy. I recommend running <code>dokkufy help</code> to see how you can explore and install plugins to install things like Postgres, Redis, and other features on your machine.</p>
+
+<p>I also want to thank the awesome <a href="https://github.com/progrium">Jeff Lindsay</a> for his work on Dokku and I want to highlight what seems to be the next iteration of Dokku: <a href="https://flynn.io/">Flynn</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list - Week 40]]></title>
+    <link href="http://cristianobetta.com/blog/2013/10/05/reading-list-week-40/"/>
+    <updated>2013-10-05T17:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/10/05/reading-list-week-40</id>
+    <content type="html"><![CDATA[<h3><a href="http://github.com/ukiepc2013">UK IEPC 2013</a></h3>
+
+<p>I decided to drop by the <a href="http://www.cs.nott.ac.uk/~mlw/ukiepc/2013/">UKIEPC</a> at Nottingham University today and they offered me to enter as a visitor. I used to do these programming competitions when I was in uni with Melinda and Reinier (go Team OLF!) so it was a bit of nostalgia to be able to participate again. I ended up leading the board for a bit in Nottingham but eventually <a href="https://ukiepc13.contest.scrool.se/standings/">ended up 2nd, and 22nd on the UK standings</a>. Only downside: Ruby wasn&#8217;t an allowed language so I had to brush up my Python skills.</p>
+
+<h3><a href="https://www.petekeen.net/dry-your-rails-crud-with-simple-form-and-inherited-resources">DRY up your CRUD</a></h3>
+
+<p>I really love the idea of the <a href="https://github.com/josevalim/inherited_resources">Inherited Resources</a> gem in this article to clean up standard CRUD code. I&#8217;m tempted to try this in a project I&#8217;m working on at the moment in combination with <a href="https://github.com/ryanb/cancan">cancan</a>.</p>
+
+<h3><a href="http://12factor.net/">The Twelve Factor App</a></h3>
+
+<p>I&#8217;ve been starting to get the hang of app deployment lately. I have access to the internal <a href="http://www.openstack.org/">OpenStack</a> platform at eBay and have written a few modules to handle deployment for my Rails apps. I keep going back to this site to challenge myself to answer the question: what would be the right way to do this?</p>
+
+<h3><a href="http://gistflow.com/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules">sandi_meter gem</a></h3>
+
+<p>Apparently Sandi Metz recently talked about her seemingly arbitrary but pretty sensible standards for maintaining clean, manageable and readable code. It&#8217;s one of those basic heuristics that helps you identify code smell. It has now been turned into a gem by Anatoli Makarevich and will join my list of handy code sanitation tools.</p>
+
+<h3><a href="https://konklone.com/post/switch-to-https-now-for-free">Switch to HTTPS for free</a></h3>
+
+<p>Getting an SSL certificate can be expensive but apparently using <a href="https://www.startssl.com/">StartSSL</a> you can now get your own for free for personal use. Sadly <a href="http://pages.github.com/">Github pages</a> doesn&#8217;t support SSL so I won&#8217;t be switching this site any day soon, but I will keep it in mind if I ever change hosting.</p>
+
+<h3><a href="http://semantic-ui.com/">Semantic UI</a></h3>
+
+<p>I am not a great fan of Twitter Bootstrap. It somehow seems to breed divs and everything made in it looks like Twitter Bootstrap. This framework looks to be a bit cleaner and I like the look. Now don&#8217;t all go use it or I will get sick of this one pretty quickly too.</p>
+
+<h3><a href="http://www.ruby.or.jp/en/news/20130924.html">ruby-lang.org design contest</a></h3>
+
+<p>I&#8217;ve never really liked the Ruby website (<a href="http://rubylang.org">ruby-lang.org</a>) so it is good to see a competition to find a new design. I&#8217;m not sure about the whole free labour implications in this but I think there are plenty of passionate Ruby devs wiling to put in an entry just to give back to the community.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Log In With PayPal into Rails]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
+    <updated>2013-09-27T08:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
+    <content type="html"><![CDATA[<p>Earlier this year PayPal launched the new <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/">Log In with PayPal</a> experience worldwide. Integrating it into Rails is very straightforward with the help of <a href="https://github.com/intridea/omniauth">Omniauth</a> so I thought I&#8217;d show how with a little tutorial.</p>
+
+<p><strong>Log In With PayPal</strong> is much like <strong>Log In with Twitter</strong> or <strong>Log In with Facebook</strong> but it has the cool benefit of being able to provide you some extra user information like:</p>
+
+<ul>
+<li>A full street address</li>
+<li>Gender</li>
+<li>Account verification status</li>
+</ul>
+
+
+<p>All the code for this tutorial is available on <a href="https://github.com/cbetta/login-with-paypal-demo-rails">Github</a>.</p>
+
+<h2>Acquiring credentials</h2>
+
+<p><strong>Log In With PayPal</strong> uses OAuth 2.0/OpenID Connect 1.0 and the full documentation can be found on the <a href="https://developer.paypal.com/">PayPal developer portal</a>. Because it&#8217;s based on OAuth 2.0 we&#8217;re going to have to get some OAuth credentials that we can use in our app.</p>
+
+<h3>Creating an application profile</h3>
+
+<p>The developer portal doubles as the sandbox and application control panel. Head over and login to get yourself some fresh credentials.</p>
+
+<ol>
+<li>Go to <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Login or signup and then login</li>
+<li>Go to <a href="https://developer.paypal.com/webapps/developer/applications/myapps">Applications</a></li>
+<li>Hit the <strong>Create application</strong> button</li>
+<li>Choose a name, leave the <strong>Integration type</strong> set to <strong>Web</strong></li>
+</ol>
+
+
+<p>Your app is now created and you can find your credentials under <strong>Application Details</strong>. Please note that there are 2 sets of credentials. Your live credentials can be used for actual payments and actual logins with real PayPal accounts. Your test credentials are there for using <strong>sandbox accounts</strong> (read fake/mock accounts) when in development.</p>
+
+<h3>Enabling Log In With PayPal</h3>
+
+<p>We are going to have to enable Log In With PayPal for our app.</p>
+
+<ol>
+<li>Scroll down to the bottom of your app details</li>
+<li>Flip the switch to turn <strong>Log In With PayPal</strong> to <strong>ON</strong></li>
+<li>Set the <strong>Return URL</strong> to <code>http://127.0.0.1:3000/auth/paypal/callback</code> (or something else if you don&#8217;t run your Rails app like this)</li>
+<li>Click on <strong>Add a different return URL for test</strong> and also set that return URL.</li>
+<li>Set the privacy policy and agreement URLs to anything you want for now</li>
+<li>Scroll a bit back up and hit <strong>Save</strong></li>
+</ol>
+
+
+<p>Optionally you can now toggle <strong>Accept Payments</strong> to off if you don&#8217;t intend to take payments with this app.</p>
+
+<h3>Test accounts</h3>
+
+<p>If you want to run Log In With PayPal in sandbox (a.k.a. test) mode you will need to create some fake test accounts.</p>
+
+<ol>
+<li>Go to <a href="https://developer.paypal.com/">developer.paypal.com</a> and login</li>
+<li>Go to <a href="https://developer.paypal.com/webapps/developer/applications/myapps">Applications</a></li>
+<li>On the left click on <a href="https://developer.paypal.com/webapps/developer/applications/accounts">Sandbox accounts</a></li>
+<li>Hit the <strong>Create Account</strong> button</li>
+<li>Unless you have any specific needs I advice you only fill in the following:
+
+<ol>
+<li>Fill in an <strong>email address</strong>. It has to be unique and not match any other live or sandbox email address. I generally pick one of my domains and do <strong>something@mydomain.com</strong>.</li>
+<li>Fill in a <strong>password</strong>. Pick something easy.</li>
+<li>Skip everything else and hit <strong>Create Account</strong> at the bottom of the page</li>
+</ol>
+</li>
+</ol>
+
+
+<p>Using sandbox account for Log In With PayPal is very useful as it allows you to login as different users. At no point should you be sharing your live PayPal username and password with other developers for testing.</p>
+
+<h2>Integration</h2>
+
+<p>Assuming a plain Rails app adding Log In With PayPal is now pretty straightforward.</p>
+
+<h3>Add omniauth</h3>
+
+<p>Add the omniauth gem to your <code>Gemfile</code> and bundle.</p>
+
+<script src="https://gist.github.com/cbetta/8b49e385cac9ad2aeb63.js"></script>
+
+
+<p>Now add the following snippet into <code>config/initializers/omniauth.rb</code>.</p>
+
+<script src="https://gist.github.com/cbetta/294896cd54c795b6e52c.js"></script>
+
+
+<p>Replace the <code>"AZj...yjx"</code> and <code>"EL4...Q3s"</code> with own API Client ID and Secret respectively. Also make sure to set the sandbox value to <code>false</code> when using your Live API credentials.</p>
+
+<h3>Handle login</h3>
+
+<p>Now that your app is setup and running visit <code>http://127.0.0.1:3000/auth/paypal</code> to start the login. Go try it and use that test account you just set up!</p>
+
+<p>You may notice that after the login the app will return back to your app on the <code>/auth/paypal/callback</code> path and then fail. This is because we still need to implement this functionality.</p>
+
+<p>We need to do 2 things. First we add a catch for this route in <code>config/routes.rb</code>.</p>
+
+<script src="https://gist.github.com/cbetta/bde3d873ba1be5d826fc.js"></script>
+
+
+<p>We then need to implement this action in <code>app/controllers/sessions_controller.rb</code> much like this:</p>
+
+<script src="https://gist.github.com/cbetta/b6b69d4fa07d5be6273f.js"></script>
+
+
+<p>The magic here is in the <code>request.env['omniauth.auth']</code> object, which is generated by Omniauth and will look something like this:</p>
+
+<script src="https://gist.github.com/cbetta/d8870bcb0736ca6d143f.js"></script>
+
+
+<p>You can use the <code>uid</code> to identify the user. I used it to find or create a <code>User</code> record, but you could also tie it to a different model. In my case I can then use the following to find the user:</p>
+
+<script src="https://gist.github.com/cbetta/fe53c8eaf482b4331bf1.js"></script>
+
+
+<h2>Advanced</h2>
+
+<p>That&#8217;s it! Most of my code can be seen on <a href="https://github.com/cbetta/login-with-paypal-demo-rails">Github</a> and it includes a full login and logout. I want to highlight a few extra things though that are available to you that are pretty useful.</p>
+
+<h3>More user details</h3>
+
+<p>Getting the user&#8217;s UID is fun but rather limiting. Luckily Log In With PayPal allows for a whole lot of <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes">extra attributes</a> to be requested. By default you have access to all attributes in the <code>openid</code> <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#attributes">scope</a>.</p>
+
+<p>Let&#8217;s change our code to also request the user&#8217;s <strong>name</strong> and <strong>email address</strong>. If we look at the table we see that for this we need to add the <code>email</code> and <code>profile</code> scopes to our Omniauth configuration.</p>
+
+<p>The first step is to add these scopes to Omniauth:</p>
+
+<script src="https://gist.github.com/cbetta/5721d05a6d0432fce50c.js"></script>
+
+
+<p>Please make sure <strong>not to comma seperate the scopes</strong> as this will cause issues later.</p>
+
+<p>Secondly we need to update our application settings.</p>
+
+<ol>
+<li>Go back to our application details on <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Scroll to the <strong>Log In With PayPal</strong> settings at the bottom</li>
+<li>Click <strong>Customize</strong> next to <strong>Personal Information</strong> and tick <strong>Full name</strong></li>
+<li>Click <strong>Customize</strong> next to <strong>Address Information</strong> and tick <strong>Email address</strong></li>
+<li>Scroll up a bit and save</li>
+</ol>
+
+
+<p>Now if we try to login again we can access the user&#8217;s extra details as follows:</p>
+
+<script src="https://gist.github.com/cbetta/a0a1f2894d98b312cfbc.js"></script>
+
+
+<h3>Omniauth test mode</h3>
+
+<p>Omniauth can be slow and especially in tests this can be frustrating. Luckily Omniauth has a <strong>test mode</strong> that allows you to skip the PayPal flow and just &#8220;pretend&#8221; like a user has logged in.</p>
+
+<p>Add the following to your <code>config/initializes/omniauth.rb</code>:</p>
+
+<script src="https://gist.github.com/cbetta/fbda182d6cdd5f1295e3.js"></script>
+
+
+<p>Your app will now skip the PayPal servers and login with the details from above. I use this a lot in my automatic tests.</p>
+
+<h2>Next</h2>
+
+<p>That&#8217;s it for now but I will soon be doing a few more of these. I&#8217;m planning at least an overview of how to do this in Sinatra and I also want to demo how to use <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/#seamlesscheckout">Seamless Checkout</a> on top of this tutorial.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PayPal Seamless Checkout with Rails]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/25/paypal-seamless-checkout-with-rails/"/>
+    <updated>2013-09-25T12:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/25/paypal-seamless-checkout-with-rails</id>
+    <content type="html"><![CDATA[<p>Continuing from previous post.</p>
+
+<h1>Enable Seamless Checkout</h1>
+
+<ul>
+<li>Login to <a href="http://developer.paypal.com">developer.paypal.com</a></li>
+<li>Go to <strong>Applications</strong></li>
+<li>Select your application from the list</li>
+<li>Scroll down to <strong>Login With PayPal</strong></li>
+<li>Check <strong>Use Seamless Checkout</strong></li>
+<li>Scroll back up and hit <strong>Save</strong></li>
+<li>Also make sure <strong>Accept Payments</strong> is turned on (we turned that off in the last post).</li>
+</ul>
+
+
+<h1>Update OmniAuth to use Seamless Checkout</h1>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Rails</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span> <span class="no">OmniAuth</span><span class="o">::</span><span class="no">Builder</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">provider</span> <span class="ss">:paypal</span><span class="p">,</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="n">scope</span><span class="p">:</span> <span class="s2">&quot;openid email profile https://uri.paypal.com/services/expresscheckout&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Make a payment</h1>
+
+<p>Add the PayPal SDK to your Gemfile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paypal-sdk-rest&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now make a new initializer in <code>config/initializers/paypal.rb</code> to configure PayPal.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">PayPal</span><span class="o">::</span><span class="no">SDK</span><span class="o">::</span><span class="no">REST</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
+</span><span class='line'>    <span class="ss">:mode</span> <span class="o">=&gt;</span> <span class="ss">:sandbox</span><span class="p">,</span>  <span class="c1"># Set :sandbox or :live</span>
+</span><span class='line'>    <span class="ss">:client_id</span>     <span class="o">=&gt;</span> <span class="s2">&quot;CLIENT_ID&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:client_secret</span> <span class="o">=&gt;</span> <span class="s2">&quot;CLIENT_SECRET&quot;</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a PaymentsController to prepare and setup the payment.</p>
+
+<p>&#8220;`ruby</p>
+
+<p>&#8220;`</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list - Week 38]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/20/reading-list-week-38/"/>
+    <updated>2013-09-20T00:40:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/20/reading-list-week-38</id>
+    <content type="html"><![CDATA[<p>I thought I&#8217;d get back into blogging again so let&#8217;s start with a simple reading list. Here&#8217;s some articles that have kept me busy over the past week and I&#8217;d think people ight enjoy.</p>
+
+<ul>
+<li>Pete Keen has a short list of <a href="http://www.petekeen.net/essential-tools-for-starting-a-rails-app-in-2013">Essential Tools for Starting a Rails App in 2013</a>. I knew most of them but there were a few I didn&#8217;t yet.</li>
+<li>Lindsey Bieda has a nice article explaining how to add a <a href="http://rarlindseysmash.com/posts/config-and-generators-in-gems">nice configuration method and generator</a> to your Ruby Gem. I need to add this to my next Gem.</li>
+<li>The great guys at GlobalDev are doing a series of RubyTips. As a big proponent for short, concise and well structured code I think there&#8217;s a few amazing gems (no pun intended) in there. (<a href="http://globaldev.co.uk/2013/09/ruby-tips-part-1/">Part 1</a>, <a href="http://globaldev.co.uk/2013/09/ruby-tips-part-2/">Part 2</a>)</li>
+<li>My colleague Tim has been working on a series explaining how to use the new REST APIs in NodeJS. The firs 2 parts are available now (<a href="https://devblog.paypal.com/building-a-node-and-paypal-app/">Part 1</a>, <a href="https://devblog.paypal.com/building-a-web-app-with-node-js-the-paypal-sdk-part-2/">Part 2</a>). I need to do this myself to get the hang of NodeJS a bit more.</li>
+<li><a href="http://crystal-lang.org/">Crystal</a> is a Ruby-like language that compiles down to C. Sounds to good to be true and I need to play with this stat!</li>
+<li>There is now an app to teach you <a href="http://iconoclastlabs.github.io/rubytrivia/">arbitrary Ruby trivia</a>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The joy and pain of using Jekyll]]></title>
+    <link href="http://cristianobetta.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll/"/>
+    <updated>2013-08-21T22:48:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been tempted to write a bit about Static Site Generators (SSGs) for a while now, mainly because I love them. I&#8217;ve been using (Jekyll)[http://jekyllrb.com/] for various projects for a while now and I love it. The simplified hosting, higher security, and general hackability are just a few pros that make it worth it.</p>
+
+<p>But they have also pained me, and after reading <a href="http://screamingatmyscreen.com/2013/8/the-joy-and-pain-of-using-a-static-site-generator-for-private-and-client-work/">&#8220;The joy and pain of using a static site generator for private and client work&#8221;</a> I thought I&#8217;d add in my own few observations from a Jekyll perspective.</p>
+
+<h2>The joys</h2>
+
+<p>Why would I talk about Jekyll specifically? It has a lot of pros that make it
+one of the most popular SSGs out there, and hence worth dicussing. Here are just a few:</p>
+
+<ul>
+<li>It&#8217;s extremely simple, has no predefined structure, just write HTML or Markdown and go</li>
+<li>No server side code is a big pro to me, easier deployment, easier security, simpler hosting.</li>
+<li>It&#8217;s the default recommended SSG for <a href="http://pages.github.com/">Github Pages</a>, allowing you to use them as free hosting!</li>
+<li>Github even compiles Jekyll for you server side meaning you can use <a href="http://github.com">Github.com</a> to edit your site.</li>
+</ul>
+
+
+<h2>Pain points</h2>
+
+<p>Sadly not all is perfect and here are some of my main observations of working on a few Jekyll sites in small teams.</p>
+
+<h3>Forget about I18n</h3>
+
+<p>Most of you might not ever need any internationalisation but the day a client turns around to you and asks &#8220;Can we translate this one page to Spanish?&#8221; you will hate yourself for using Jekyll. Internationalisation is not standard supported and therefore a royal pain in the *** to do nice.</p>
+
+<p>Not to mention that you can&#8217;t serve the same content in different languages under the same URL depending on the user&#8217;s cookie or locale. Forget about it, ain&#8217;t gonna happen.</p>
+
+<h3>No plugins on Github</h3>
+
+<p>There are a lot of plugins for Jekyll and they&#8217;re awesome. There&#8217;s even a few for I18n, though I never tried them. Sadly non of them are supported by Github. Sure, you can compile your code client side, then push the compiled code (including the plugin generated code) to the server. This stops you from quickly pushing any mayor changes without using a laptop.</p>
+
+<h3>No predefined structure</h3>
+
+<p>Jekyll is ridiculously simple. I think all you need is a config file and some HTML or Markdown and <strong>boom</strong> your site is there.  But when your site extends beyond a few files you quickly start adding some folders: images go into <code>/images/</code>, stylesheets into <code>/stylesheets/</code>, etc. But what about pages? Use <code>foo.html</code> or <code>foo/index.html</code>? Store the images for that pages in <code>/images/foo/</code> or <code>/foo/images/</code>?</p>
+
+<p>All of these decisions are easily made, but it does mean you need to explain every new decision to your colleagues, and it increases the technical debt when bringing onboard new developers.</p>
+
+<h3>Markdown is limited</h3>
+
+<p>I love Markdown but sometimes it can be such a pain. Especially when you want to go outside of the standard &#8220;headers, paragraphs, links&#8221; it can just be upsetting. Getting HTML inside Markdown to work in Jekyll used to (and probably still) require switching to a different Markdown parser, which wasn&#8217;t supported on Github, etc.</p>
+
+<p>To be honest this is a bit of a pet peeve with Markdown, not Jekyll. Often all I want to do is just add a class to something, either a header or a link. I often wished Markdown supported something like this:</p>
+
+<script src="https://gist.github.com/cbetta/48c07f2bd1e1915aefa6.js"></script>
+
+
+<h2>Suggestions</h2>
+
+<p>In short, I think a few suggestions for the further improvements of Jekyll, Github Pages, and Markdown are at hand:</p>
+
+<ol>
+<li>Standard I18n support in Jekyll would be nice</li>
+<li>Support for some default &#8220;safe&#8221; plugins on Github would be amazing</li>
+<li>A generator to generate a &#8220;default&#8221; site structure would be nice and could help promote best practices.</li>
+<li>Markdown should support some basic classes and indexes, allowing easier application of CSS and JS.</li>
+</ol>
+
+
+<p>Alternatively I highly recommend using <a href="http://middlemanapp.com/">Middleman</a>, another SSG that seems to solve some of the pain points described above.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to run apt-get update before Puppet]]></title>
+    <link href="http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/"/>
+    <updated>2013-02-05T14:56:00+00:00</updated>
+    <id>http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet</id>
+    <content type="html"><![CDATA[<p>One of the problems I keep running into with Puppet is that the packages I&#8217;m trying to install are very new and I need to run <code>apt-get update</code> to update the repositories. Because Puppet does not run scripts it gets rather annoying to get the update to run before you install any packages.</p>
+
+<p>I found a lot of solutions around the web but this one seems to work best for me.</p>
+
+<script src="https://gist.github.com/cbetta/4714469.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby gems are still not safe to use]]></title>
+    <link href="http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use/"/>
+    <updated>2013-02-02T13:24:00+00:00</updated>
+    <id>http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use</id>
+    <content type="html"><![CDATA[<p>In the light of the recent <a href="http://rubygems.org">Rubygems.org</a> security compromise the community has been looking at ways to make Rubygems.org and Ruby gems in general more secure. The project is still ongoing and feel free to help them out on #rubygems on Freenode, but here is a highlight of what I think are some of the main issues.</p>
+
+<p>Some of the issues highlighted here are taken from <a href="http://www.youtube.com/watch?v=z-5bO0Q1J9s">Ben Smith&#8217;s enlightening (but scary) talk at Aloha Ruby Conference</a>.</p>
+
+<h2>Disclaimer</h2>
+
+<p>I am not a security expert. I am just a Ruby developer and a gem author that is worried about the current state of the Ruby gems ecosystem. I also am worried that the next negative news around Ruby will involve the problems described below.</p>
+
+<h2>What are Ruby gems and what is Rubygems.org?</h2>
+
+<p>For those not familiar, <a href="http://rubygems.org">Rubygems.org</a> is the most popular repository of &#8220;gems&#8221; for the <a href="http://rubylang.org">Ruby language</a>. Gems are libraries made up out of Ruby (and optionally C) code and can be uploaded by anyone who registered for an account. Rubygems.org currently hosts 50,685 gems which have been downloaded 1,259,533,358 times since July 2009. Ruby gems are not only hosted on Rubygems.org, anyone can run their own repository but Rubygems.org is definitely the most used one.</p>
+
+<h2>Current state</h2>
+
+<p>Some parts of the current infrastructure are worrying.</p>
+
+<ul>
+<li><p><strong>Hard to tell if gems were changed on the repo.</strong> It took the Rubygems.org volunteers more than 24 hours to verify every gem&#8217;s checksum against external mirrors.</p></li>
+<li><p><strong>Impossible to tell if gems were uploaded by gem owner.</strong> It is currently very hard to know if a gem was actually uploaded by it&#8217;s owner. Developer machines can be compromised and a users API credentials for Rubygems.org are kept unencrypted in <code>~/gem/credentials</code>.</p></li>
+<li><p><strong>Gem owner isn&#8217;t notified of new gem uploads.</strong> When a gem developer&#8217;s credentials are compromised a new version of the gem can be uploaded without the gem owner ever knowing.</p></li>
+<li><p><strong>Impossible to notify a gem user of compromised gems.</strong> When a gem developer&#8217;s credentials are compromised it is hard to notify anyone who uses any of the gems published by the developer of the situation.</p></li>
+<li><p><strong>Gems can run code on install.</strong> This is probably the most interesting attack vector in the foreseeable future. It seems this feature was relatively unintentional as it involves tying into the fact that Ruby gems can contain C code. Running code on install will mean that gems can steal the unencrypted Rubygems.org credentials which can then be used to modify the compromised user&#8217;s gems and spread the malicious code further.</p></li>
+</ul>
+
+
+<h2>Proposals for change</h2>
+
+<ul>
+<li><p><strong>Notify gem owners of newly published gems.</strong> Adding a simple email notification to the gem owner will at least allow for easier detection of compromised gems. Sadly at this point the gem is already compromised and possibly already spread over any mirrors and downloaded by users.</p></li>
+<li><p><strong>Secure developer&#8217;s Rubygems.org credentials.</strong> This is pretty simple. My ssh key has a passphrase on it and so should my Rubygems.org credentials. Stealing a rubygems.org API key is easy, using one that requires a passphrase a lot harder.</p></li>
+<li><p><strong>Stop running code on gem install.</strong> I totally see the need for having C extensions in a Ruby gems, and those extensions need to be compiled, but we seriously need to find a way to compile C code without allowing for the arbitrary execution of code on install of a gem.</p></li>
+<li><p><strong>Automatically mirror gems and checksums.</strong>  A system involving the automatic mirroring of gems and their checksums to other servers would definitely have made the verification of gems a lot easier in the last few days.</p></li>
+<li><p><strong>Force signing of gems.</strong> Yes, <a href="http://docs.rubygems.org/read/chapter/21">you can sign your gems</a> but almost nobody does (and neither do I). Additionally it&#8217;s a pain to force the usage of signed keys on the gem user&#8217;s side, not to mention the futility as most gems aren&#8217;t signed. Signing is the way to go though and work on this has started. It&#8217;s a difficult topic though and work is being done to make it as painless as possible for users and developers.</p></li>
+<li><p><strong>Notify gem users of unsigned/insecure gems.</strong> The rubygem binary (together with tools like <a href="http://gembundler.com/">Bundler</a>) should be updated to allow for verification of signatures which will allow it to notify gem users of unsigned or compromised gems.</p></li>
+</ul>
+
+
+<h2>How can I help?</h2>
+
+<ul>
+<li><strong>Code:</strong> <a href="https://github.com/rubygems">rubygems</a>, <a href="https://github.com/rubygems-trust">rubygems-trust</a>(fork for implementing a signed approach)</li>
+<li><strong>Discussion:</strong> #rubygems and #rubygems-trust on Freenode</li>
+</ul>
+
+
+<h2>Did I miss anything?</h2>
+
+<p>Please let me know and I&#8217;ll add it to the list.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A look back at 2012]]></title>
+    <link href="http://cristianobetta.com/blog/2013/01/08/lookback-at-2012/"/>
+    <updated>2013-01-08T22:10:00+00:00</updated>
+    <id>http://cristianobetta.com/blog/2013/01/08/lookback-at-2012</id>
+    <content type="html"><![CDATA[<p>With all the new years resolutions out of the way I want to share what (programming) skills I learned or revisited in 2012.</p>
+
+<p>This will be more positive than looking back in a year and counting the things I promised but didn&#8217;t do.</p>
+
+<h2>Programming skills</h2>
+
+<h4>Advanced Ruby</h4>
+
+<p>I knew Ruby already, but it always was a very &#8220;Rails&#8221; type of Ruby. Working with <a href="http://caius.name/">Caius</a> and <a href="http://www.linkedin.com/in/rahoulbaruah">Baz</a> at <a href="http://emberads.com">EmberAds</a> has brought this to a whole new level though. Writing modules, writing gems, extending classes, applying best practices, etc, all of those can seem daunting at first but they are oh so useful.</p>
+
+<p>It also has had a great effect on my proficiency in Rails.</p>
+
+<blockquote><p>You can spot a good Rails programmer by their number of regular Ruby objects in their codebase</p></blockquote>
+
+<p>I don&#8217;t remember who said this but it really has started to ring truth to me in the past year. The Rails community has lately been alight with discussions about DCI, Concerns, Service Objects, Delegation and other ways of moving more and more code out of controller and models and into regular Ruby objects.</p>
+
+<h4>Testing code using RSpec</h4>
+
+<p>Learning to write tests has always been at the top of my list of things to learn but I somehow never got to it. Luckily Caius and Baz wouldn&#8217;t allow any code to go untested and it soon became a much loved practice. It is a hard skill to master though so I don&#8217;t blame my past self.</p>
+
+<p>I think it&#8217;s a skill best learned by example and from a colleague. I still feel like I&#8217;m learning more and more about the intricate aspects though as it&#8217;s relatively easy to write a test that tests too much or too little. We&#8217;ll see where I am at the end of 2013.</p>
+
+<!-- more -->
+
+
+<h4>Server deployment with Puppet</h4>
+
+<p>I used to love <a href="http://heroku.com">Heroku</a> but it has its issues. Most importantly to me is the relative high cost of doing anything asynchronously in the background (e.g. using <a href="https://github.com/defunkt/resque">Resque</a>). I always wanted to setup my own server but the last time I did this was ages ago and I had lost all the skills I had build up.</p>
+
+<p>So this time I started over using <a href="http://puppetlabs.com/">Puppet</a>. Like I said in my <a href="http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet/">previous post</a>, I&#8217;m not 100% sure if I like Puppet but it does do the job for now and has allowed for me to have a repeatable setup for Rails apps, allowing me to deploy a new Rails app (often a simple hack) within minutes (just like on Heroku).</p>
+
+<h4>Machine learning, algorithms, databases</h4>
+
+<p>Algorithms and AI already was a lot of fun at university but at EmberAds I finally got to apply a lot of that knowledge again.</p>
+
+<p>So what lessons did I learn? Here are some:</p>
+
+<ul>
+<li>Not all databases are the same</li>
+<li>counting can be slow (on postgres)</li>
+<li>Redis is FAST</li>
+<li>bloom filters are FASTER</li>
+<li>VPS&#8217;s are expensive when all you need is memory</li>
+</ul>
+
+
+<p>I really want to look at more specific databases and focus on honing my map-reduce skills in 2013.</p>
+
+<h4>Writing iOS Apps</h4>
+
+<p>Melinda and I have had an idea for a mobile app for a while and we both had tried to take up iOS development but we never never really got into it. In 2012 we found that <a href="http://www.raywenderlich.com/store/ios-apprentice">The iOS Apprentice</a> was the tutorial we were looking for and have finally started making progress to get our app out there.</p>
+
+<h4>Working remotely in a team on 1 project</h4>
+
+<p>One of the more subtle but definitely biggest changes last year was working in a passionate team on 1 project. I realise now that in the past few years I had rarely worked on 1 project with multiple developers. I know this might seem normal to some, but as a freelancer I&#8217;ve always worked with others but rarely many other developers, and in my time at Nudge we were mostly all working on different projects. It has been a real breeze being able to be in a team where everyone can pick up any bit of the code and improve or extend it and rely on everyone else to keep them to the same standards they would keep the other.</p>
+
+<p><a href="http://campfirenow.com/">Campfire</a>, <a href="http://github.com">Github</a>, and <a href="http://dropbox.com">DropBox</a> have been our big friends in 2012.</p>
+
+<h2>Non programming skills</h2>
+
+<h4>Running</h4>
+
+<p>Apologies to my friends on Twitter and Facebook for spamming them every other day to tell them I ran another X kilometres, but the truth is simple: sharing my progress helps to motivate me. Tracking and talking about your health seems to be a real factor in keeping the progress going.</p>
+
+<p>Sadly I hurt my knee just after being able to hit a regular 5km. I now changed my training to prepare for a triathlon. I might even actually do one in 2013 as a sprint-relay with Kevin and Ruth. I would love to do a full sprint triathlon in 2013, but like I said, I wasn&#8217;t going to make any resolutions.</p>
+
+<h4>Driving</h4>
+
+<p>After years of postponing I finally did it and got my license. Sadly driving is really expensive for a new driver in London, and driving a rental isn&#8217;t an option either.</p>
+
+<p>The plan is to sell the current car in August and move on to something like ZipCar. I did the math and it&#8217;s quite simple: my usage is so low that I can even rent quite a nice car for a week every so often to head to The Netherlands, and still come out with money saved.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hacks/Products - A discussion on responsibility]]></title>
+    <link href="http://cristianobetta.com/blog/2012/11/12/hacks-products-a-discussion-on-responsibility/"/>
+    <updated>2012-11-12T17:35:00+00:00</updated>
+    <id>http://cristianobetta.com/blog/2012/11/12/hacks-products-a-discussion-on-responsibility</id>
+    <content type="html"><![CDATA[<p><strong>&lt;TL;DR></strong></p>
+
+<p>Who is responsible for developing a hack beyond a hack day? Is it just the developer or should the sponsors and organisers be setting a right framework? If Open Sourcing a hack is not enough, what then? What do you think? Let me know in the comments.</p>
+
+<h2>The problem</h2>
+
+<p>I was surprised to see the amount of criticism I was getting during the <a href="http://charityhack.org/">CharityHack 2012</a> (more about that and my hack soon) regarding my intensions of continuing development of my hack after the event.</p>
+
+<p>See, <a href="https://github.com/tomoconnor">Tom</a> and I had made a nice hack that had gathered quite a bit of interest from people at CharityHack. Even before we finished the product quite a few people from charity related organisations had come up to me to ask/tell me:</p>
+
+<ul>
+<li>if I was going to continue development</li>
+<li>if I was going to start a company</li>
+<li>that they could secure some funding for me</li>
+<li>when they could use the product</li>
+</ul>
+
+
+<p>They were baffled when I told them that I - as for that moment - had no intention of starting a company based on this hack. I already have a day job, I already have a startup, and I already am busier than I should be. I offered to put the code online, make it open source, allow anyone to work on it, but somehow that wasn&#8217;t enough.</p>
+
+<p>And I can understand why: it&#8217;s hard to find developers with a passion for someone else&#8217;s idea. It also hurts to see an idea abandoned as quickly as it was created. But it made me think: who is responsible for these hacks after an event? Especially an event like CharityHack where the goal is most definitely something more noble than some of the other Hack Days.</p>
+
+<p>Maybe the organisers (in this case PayPal) should be the ones to set a framework. I&#8217;ve seen quite a few Hack Days where the winners get some funding to continue the product. But often this funding is very low (funding 1 developer for about half a year max), and it fails to ask the question: does the developer even want any funding? And if so, can they actually find the time?</p>
+
+<h2>Solutions?</h2>
+
+<p>So are there any solutions to this? Last weekend at the <a href="http://mozillafestival.org/">Mozilla Festival</a> I was talking to the people behind <a href="http://hackshackers.com/">Hacks/Hackers</a> and they seemed to have the same issues. I thought it might be handy to have some more regular events (every month or week) to keep ideas alive and show the progress achieved, but I was told that this was already tried without much success.</p>
+
+<p>It was suggested that it would be cool to have some agency as a sponsor/host/participant that would provide X hours of development work on the product after the event to help bring the product to a real first version. This reminded me of the <a href="http://www.campus-party.eu/2012/Think-Big-App-Workshop.html">Think Big event</a> I helped out with at Campus Party Berlin. Here it was Telefonica that offered a certain amount of hours to have an app concept worked out into a product, seeing as the idea creators weren&#8217;t actually developers themselves.</p>
+
+<p>In the end I don&#8217;t know what the solution is though. I&#8217;ve always thought that &#8220;just open sourcing it&#8221; would be enough, but I have to admit that even I can see that that would just lead to more and more awesome but abandoned projects.</p>
+
+<p>What do you think? Let me know in the comments.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Some notes on Puppet]]></title>
+    <link href="http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet/"/>
+    <updated>2012-11-12T16:40:00+00:00</updated>
+    <id>http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been playing with <a href="http://puppetlabs.com/">Puppet</a> recently in order to finally teach myself a bit about server management. I decided for Puppet because&#8230; well&#8230; I didn&#8217;t have time to play with <a href="http://www.opscode.com/chef/">Chef</a> yet.</p>
+
+<p>I can&#8217;t show any of my code because it contains some stuff I&#8217;d rather not open up, but here are some of my global notes on Puppet that I wanted to share.</p>
+
+<h2>The good</h2>
+
+<ul>
+<li><strong>It did the job.</strong> I now have a few scripts that I can use to quickly setup a server for Rails, including NGINX, PostgreSQL, Unicorn, Monit, and much more.</li>
+<li><strong>Quick deployment.</strong> I can now deploy a new Rails app to a server within minutes!</li>
+<li><strong><a href="http://docs.puppetlabs.com/learning/">The Learning Puppet series</a></strong> is a good starting point and explains most of the basics</li>
+<li><strong>Low tech.</strong> Running a puppet script really doesn&#8217;t involve much more than running: <code>puppet apply path/to/puppet/file.pp</code></li>
+</ul>
+
+
+<h2>The bad</h2>
+
+<ul>
+<li><strong>No single server deployment solution.</strong> There doesn&#8217;t seem to be a best practice on how to use puppet with just one server. I know that the serious people will have to manage many many servers, but I think that they could make Puppet more accessible to newcomers by having a good solid solution for their own server. Many of us learn new things by trying them out for our own hobby projects before using them in big-business contexts. I have resorted to using Capistrano for deployment, but it just feels wrong somehow.</li>
+<li><strong>Not many great modules.</strong> Puppet has a modules system which allows anyone to package their solutions and share them with the community. Sadly most of the modules are old, unmaintained, and often broken. Additionally the modules often don&#8217;t solve the problems in a way that I&#8217;d like them to, forcing me to write my own.</li>
+<li><strong>Convoluted language.</strong> Puppet requires Ruby to run, but the DSL is not Ruby, nor is it Javascript, or JSON,or YAML, or anything else that so many developers already know. The architecture for defining classes, types, and modules is convoluted, backwards, and feels very awkward. I think one of the reasons why there aren&#8217;t many well written modules is very much related to this.</li>
+<li><strong>Compiling from source.</strong> One of the biggest missing features seems to be some good architecture for installing anything that isn&#8217;t packaged up. I often want to run a different Ruby, Nginx, Apache, PHP version than is in the package repositories. I know this is a hard problem, but again I wish there was some kind of best practice.</li>
+<li><strong>Ordering from hell.</strong> Puppet does not run your actions in order as specified in your <code>.pp</code> file. Instead you can tell it if something has a requirement. In my experience almost everything has a requirement and specifying the orders is becoming a nightmare and a real frustration.</li>
+<li><strong>Missing features.</strong> There are a few features that are still missing. One of the most important ones (in my eyes) is the ability to generate a folder recursively (e.g. <code>mkdir -p path/with/multiple/folders</code>). Instead you are now forced to create every layer as a new statement.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p>Puppet will do for now, but I wish it was a bit more opinionated in how it thought it should be used. The language is not pretty and very verbose, and its lack of best practices for single server deployment is a real omission.</p>
+
+<p>Does anyone know how Chef performs in these regards?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[On PhoneGap/Cordova and cross platform mobile development]]></title>
+    <link href="http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development/"/>
+    <updated>2012-06-04T12:34:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development</id>
+    <content type="html"><![CDATA[<p>So last weekend I was at <a href="http://overtheair.org/">Over The Air 2012</a> - on of my favorite regular Hack days - and for the first time I decided to actually try and make a &#8220;native&#8221; mobile app.</p>
+
+<p>Seeing as I don&#8217;t want to have to redo the app for every platform I decided to try out one of the more famous cross platform development frameworks: <a href="http://phonegap.com/">PhoneGap</a>.</p>
+
+<p>Here are some of the things I discovered during the weekend:</p>
+
+<ul>
+<li>PhoneGap isn&#8217;t really a framework. It&#8217;s really nothing more than a wrapper around a local HTML page with an extra JS library to access native features like the camera, local storage, etc.</li>
+<li>Although <a href="http://jquerymobile.com/">jQuery Mobile</a> looks very nice, it seems to emulate iOS, making it look out of place on any Android or Windows device.</li>
+<li>PhoneGap in combination with jQuery Mobile allows you to very quickly make a static native app, but as soon as you want to add any dynamics it seems to become quite hard. You will need some kind of JS MVC to tie it all together.</li>
+<li>I had a play with <a href="http://knockoutjs.com/">KnockoutJS</a> - which we already use at <a href="http://emberads.com">EmberAds</a> - but it had its issues:
+
+<ul>
+<li>Good tutorials on how to integrate with jQuery Mobile were missing, and I was encountering rendering issues.</li>
+<li>It&#8217;s not really a MVC, and tying it to template partials seemed harder than it should.</li>
+<li>Automatic storage of models to local storage/server was missing.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>So although I&#8217;m happy with the work we did on the first version of our app it clearly will need a rewrite in time to be viable. Here&#8217;s some of the research I&#8217;ve done so far:</p>
+
+<ul>
+<li>I will probably replace Knockout with <a href="http://backbonejs.org/">BackboneJS</a> which seems to be more flexible and actually support storing to server and/or local storage.</li>
+<li>Alternatively I might look at <a href="http://docs.sencha.com/touch/2-0/">Sensa Touch 2.0</a> which seems to be more than just a UI framework but actually also include a full MVC framework.</li>
+<li>I found some tutorial describing how to integrate PhoneGap, jQuery Mobile, and Backbone, <a href="https://github.com/ccoenraets/backbone-directory/tree/master/jquerymobile">including a bootstrapped app</a> that integrates them all in a way I might be able to re-use.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OpenCodeCamp - Where the best of HackDays and BarCamps come together]]></title>
+    <link href="http://cristianobetta.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together/"/>
+    <updated>2012-05-08T12:18:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together</id>
+    <content type="html"><![CDATA[<h3>tl;dr</h3>
+
+<p>I want to run a new kind of event: <strong>OpenCodeCamp</strong> (working title). OpenCodeCamp should be an event that promotes knowledge sharing and skills swapping amongst developers of any age or level of experience. It should be free of commercialism, competition, sexism, racism, age-ism and accessible to developers of any seniority.</p>
+
+<p>Read the full post and leave a comment if you want to get involved.</p>
+
+<!-- more -->
+
+
+<h3>Where did this come from?</h3>
+
+<p>I love HackDays but I have some issues with where they are going as you may have noticed <a href="http://blog.cristianobetta.com/2012/01/14/the-end-of-an-era/index.html">here</a>, <a href="http://cristianobetta.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/">here</a>, and <a href="http://hackdaymanifesto.com/">here</a>. I also love BarCamps, having been to many and having organised a few, but I noticed that HackDays and BarCamps are diverging in purpose and format.</p>
+
+<p>Our contact at <a href="http://www.city.ac.uk/">City University</a> where we ran 2 BarCamps once described BarCamps as &#8220;free learning events&#8221;. Anyone can come in and learn, and most people will do their best to teach others whatever knowledge they have. It brings together anyone interested enough in learning new things and with an open mind to share their own skills and knowledge in return.</p>
+
+<p>In my eyes (though I might be wrong) this is how HackDays were when they started. They were events where anyone could come to play with new programming languages and platforms, learn about new concepts and ideas, and collaborate on interesting and crazy new ideas. Sadly from there the events have become increasingly more competitive, lowering the amount of true knowledge sharing that is done, and making the events ever more closed off to anyone from outside of the particular industry that the HackDay focusses on.</p>
+
+<h3>Proposing OpenCodeCamp (working title)</h3>
+
+<p>So here is what I want to do instead: I want to run an event that promotes knowledge sharing and skills swapping amongst developers of any age or level of experience. Inspired by the <a href="http://barcamp.org/w/page/405173/TheRulesOfBarCamp">rules of BarCamp</a>, I think OpenCodeCamp should have the following rules:</p>
+
+<ul>
+<li><strong>Rule #1 - No spectators, only participants</strong> - Like with BarCamps the goal at a OpenCodeCamp is that everyone participates. You should be either involved in teaching, learning, or creating new technologies for someone else to use. If you wanted to find the nice networking you normally find at a conference, then go to a conference.</li>
+<li><strong>Rule #2 - OpenCodeCamp is for everyone</strong> - Attending OpenCodeCamp should not require you to have any experience in the topic for that camp. There should be enough people to even get the new people excited and learning new things.</li>
+<li><strong>Rule #3 - Technology over data sets</strong> - It&#8217;s great that a company has a great API to search for any cat picture on the internet, but at a OpenCodeCamp we rather have them talk about how they created the API than what is in the data set or how it can be used to make money.</li>
+<li><strong>Rule #4 - No competitions</strong> - Competitions take away from the sharing aspect of OpenCodeCamp and should therefore be avoided.</li>
+<li><strong>Rule #5 - Permanence over fashion</strong> - Try and imagine that what you create during OpenCodeCamp should be usable in 10 years time. That might mean making it open source. This way the product also doesn&#8217;t have to indefinitely run on the original developer&#8217;s server.</li>
+<li><strong>Rule #6 - [INSERT YOURS]</strong> - This list is far from done. Let me know if you think something should be added.</li>
+</ul>
+
+
+<p>I don&#8217;t have a definite format for this event yet. I&#8217;m thinking of something somewhere in between a HackDay and a BarCamp/unconference but we need to deal with a few small issues including:</p>
+
+<ul>
+<li><strong>What format?</strong> - Should this be a 1 day or 2 day event, with or without overnight, with sessions or more open spaces, etc?</li>
+<li><strong>How to measure outcome?</strong> - The one thing I like about HackDays (in contrary to BarCamps) is that at the end you can say &#8220;This is what was created&#8221;. Should we have people present what they did at the end, even if it isn&#8217;t anything visible? I personally like the idea but I think it might get very boring.</li>
+<li><strong>Should Open Source be an inherent part to the event?</strong> - One way to measure outcome is to make it a rule that anything that is generated during the weekend should be contributing to Open Source. I&#8217;m not sure if this should be a &#8220;Open Source OpenCodeCamp&#8221; or inherently part of OpenCodeCamp.</li>
+<li><strong>How to keep this out of the hands of companies and PR agencies?</strong> - I&#8217;d hate for OpenCodeCamp to go the way of a HackDay and somehow get abused by companies to be made more and more of a tool to get cheap labor out of developers. I think we can prevent this by making a good set of rules, and I&#8217;m not sure if we should do anything more than that.</li>
+<li><strong>Who&#8217;s paying?</strong> - One of the reasons we&#8217;ve seen more and more HackDays is because companies can see a nice return of investment on putting a few bucks into a HackDay which in return gives them a few nice prototypes they can show to their investors (a.k.a. cheap labor). How would companies react to an event where their APIs are not at the centre of attention.</li>
+<li><strong>Change the name?</strong> - There is already something called <a href="http://en.wikipedia.org/wiki/Code_Camp">CodeCamp</a> out there but this name was the best I could come up with. Any other suggestions?</li>
+</ul>
+
+
+<h3>How to help out?</h3>
+
+<p>Leave a comment here or send me an email with any suggestions. Also feel free to share this article with anyone you think might be interested in helping out.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What I miss about HackDays]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/"/>
+    <updated>2012-04-29T17:49:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been attending HackDays since 2007 when I travelled to Alexandra Palace for the first <a href="http://upcoming.yahoo.com/event/173371/LONDON/London/Yahoo-BBC-Hackday-2007/Alexandra-Palace/">HackDay organised by Yahoo and the BBC</a>. I was a n00b at that time (some might say I still am, #shakesfist) and I had no idea what to build. At the time I was trying to learn how to use web frameworks and at the HackDay I got my first exposures to APIs, Django, Rails, OpenID and much more. I don&#8217;t think I made anything that weekend, but damn did I learn a lot!</p>
+
+<p>Since then we&#8217;ve come a long way; HackDays are no longer just organised by big organisations. There&#8217;s pretty much one happening every weekend (sometimes more), and they are more often than not focussed around a topic. I attended at least 20 HackDays since, and I even helped organise <a href="http://www.hackcamp.org.uk/">not 1 but 2 HackCamps</a> with <a href="http://geeksoflondon.com">GeeksOfLondon</a>.</p>
+
+<p>But lately I&#8217;ve been noticing a little trend. I was at <a href="http://www.gamehack.co.uk/">GameHack</a> yesterday and I had come to have a fun weekend to play with some APIs, maybe play with some WebGL libraries, and get an idea of how game development works. I am not a game developer and don&#8217;t intend to be one, but I always enjoy learning new things.</p>
+
+<!-- more -->
+
+
+<p>Much like the most recent <a href="http://musichackday.org/">MusicHackDay</a> London though, GameHack was a lot more serious than I had anticipated. Where the first MusicHackDay was mainly web developers trying to explore music APIs, the latest one mainly had people from the (online) music industry participating in teams, working with APIs and technologies they were already well practiced in.</p>
+
+<p>I felt out of my depth at MusicHackDay and GameHack. To clarify: I don&#8217;t think this is their fault. The events are probably great for people from the relevant industries. So maybe I&#8217;ve fallen into the expectation that my existing skills will always get me somewhere at a HackDay, or maybe I&#8217;m disappointed that with all the skills I picked up since 2007 I&#8217;m still out of my depth when it comes to hardware, music, video graphics, and many other skills.</p>
+
+<p>Maybe I also miss HackDays where the variety on offer is so wide that there&#8217;s always something for someone to learn and explore, and always someone interesting to talk to and learn from. Or maybe I miss HackDays that aren&#8217;t always about winning but more about sharing.</p>
+
+<p><strong>In the end, when a HackDay has so much great talent from an industry competing to out do each other (rather than sharing), the newbies tend to not be able to pick up any new skills, let alone be motivated to try.</strong></p>
+
+<p>I think it&#8217;s time we look back at how HackDays were ran in 2006/2007 and evaluate what we sacrificed since. I would love to see some more events that are purely focussed around sharing, not competing.</p>
+
+<p>Inherently to me is the wording around these events. A lot of these events talk about <strong>apps</strong>, and offer rewards to <strong>continue work on the product</strong>, and call the HackDay a <strong>hackathon</strong>. All of this signals to me that it&#8217;s more about a sprint to produce the most commercially viable bootstrapped product, rather than a camp to share and learn how to make better technology and produce better code.</p>
+
+<p>I would love for someone to run a HackDay that&#8217;s more based on the Open Source model than the App Store model. A HackDay that rewards sharing, not competing. An event that&#8217;s ran by the community, for the community, not by this cool new startup that would like to push their API in your face.</p>
+
+<p>Maybe I will help run this HackDay myself soon. I&#8217;ve been running with the idea of an OpenSource HackDay for a while but am slightly occupied between EmberAds, and some of the upcoming GeeksOfLondon events.</p>
+
+<p>Let me know if you think this would be a good idea, and let me know what you think an event like that would look like.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tech on my radar]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/"/>
+    <updated>2012-04-19T23:19:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar</id>
+    <content type="html"><![CDATA[<p>Here are just some interesting gems and other software that have caught my attention recently:</p>
+
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> makes it easy to use zshell as a replacement for bash on OS X. It is very easy to install and comes with a whole bunch of useful plugins. I&#8217;ve only really dived half into it but already feel like it&#8217;s been making my console better. I personally love how it shows the Git branch I&#8217;m working on at the moment.</li>
+<li><a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom Filters</a> are a very cool way of doing a quick and space efficient lookup if an item exists in a set. It&#8217;s used by databases and caches, and Google uses it for their Save Browsing service. There&#8217;s some cool <a href="https://github.com/igrigorik/bloomfilter-rb">ruby gems</a> that make it easy to use them and I already have an idea where to deploy them next.</li>
+<li><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How Github uses Github</a> is pretty much how we use Github at EmberAds. The more we do it the more I see the benefits especially:
+
+<ul>
+<li>We work asynchronously</li>
+<li>We use the hell out of Campfire</li>
+<li>Master is always deployable</li>
+<li>Pull Requests are our code reviews, requests for comments, and discussion boards.</li>
+<li>Other apps have great features like prioritising stuff. But honestly, we have barely touched BaseCamp in weeks.</li>
+</ul>
+</li>
+<li><a href="https://github.com/EmberAds/cuuid">Fast UUID generation</a> is something we needed at EmberAds seeing as we use UUIDs everywhere and most of the Ruby gems were rather slow.    <a href="http://caius.name">Caius</a> cooked up a Ruby gem that uses a native C library which in our simple benchmarks spit out UUIDs about 6x faster.</li>
+<li>On that note, <a href="https://github.com/EmberAds/acts_as_uuid">acts_as_uuid</a> is what we use to store UUIDs on our models in Postgres.</li>
+<li><a href="https://github.com/ondrejbartas/rake-progressbar">Rake progressbar</a> makes it easier for me to understand if I can go and make a brew or not when some of my rake tasks are running.</li>
+<li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I&#8217;ve been working on a blog post on this, mainly to inspire regular bloggers that you don&#8217;t need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add terms & conditions validation to Omniauth Identity]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/"/>
+    <updated>2012-04-12T00:32:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity</id>
+    <content type="html"><![CDATA[<div class="entry-content"><p><a href="https://github.com/intridea/omniauth-identity">Omniauth Identity</a> is a great identity provide that shipped with Omniauth 1.0 it can be a bit simple at times. I wanted to add a simple terms and conditions check on signup to my registration form and this is what I came up with.</p>
+
+<p>For this example I assume you already have a Omniauth Identity setup much like explained in <a href="http://railscasts.com/episodes/304-omniauth-identity">this Railscast</a>.</p>
+
+<h2>Step 1 - app/views/identities/new.html.erb</h2>
+
+<p>Add a checkbox to your form.</p>
+
+<div><script src='https://gist.github.com/2368233.js'></script>
+<noscript><pre><code>&lt;div class=&quot;field&quot;&gt;
+  &lt;%= label_tag :conditions %&gt;&lt;br&gt;
+  &lt;%= check_box_tag :conditions %&gt;
+&lt;/div&gt;</code></pre></noscript></div>
+
+<!-- more -->
+
+<h2>Step 2 - app/models/identity.rb</h2>
+
+<p>Add a attribute to your identity model and check for it to be set.</p>
+
+<div><script src="https://gist.github.com/3859506.js"></script>
+<noscript><pre><code>class Identity &lt; OmniAuth::Identity::Models::ActiveRecord
+
+  ...
+
+  validates :conditions, acceptance: true, allow_nil: false, on: :create
+  attr_accessor :conditions
+
+  ...
+
+end</code></pre></noscript></div>
+
+
+<p>You should really only check this on create, otherwise this validation will run every time the identity gets updated, unless of course you decide to store the <code>conditions</code> value in the database.</p>
+
+<h2>Step 3 - config/initializers/omniauth.rb</h2>
+
+<p>This is the one that took me the longest to figure out. You need to tell Omniauth Identity what fields to look for on signup.</p>
+
+<div><script src="https://gist.github.com/3859517.js"></script>
+<noscript><pre><code>Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :identity, fields: [:email, :conditions]
+end</code></pre></noscript></div>
+
+
+<p>In the same way you can add a user&#8217;s name and other details, though I highly recommend you don&#8217;t store those on the <code>Identity</code> but on the <code>User</code> model.</p>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Hack Day Manifesto]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/"/>
+    <updated>2012-04-10T15:30:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto</id>
+    <content type="html"><![CDATA[<p>One of my friends, <a href="http://artisanofcode.com/">Dan</a>, started a document called <a href="http://hackdaymanifesto.com/">&#8220;The Hack Day Manifesto&#8221;</a> on the #GeeksOfLondon IRC channel a few days back. With the help of our community we managed to update it to a full document and it&#8217;s now live.</p>
+
+<p>It&#8217;s a must read if you ever plan to run a hack day or hackathon.</p>
+
+<p>It&#8217;s already signed by quite a few hackday organisers including the GeeksOfLondon team and you can add your own name by simply <a href="https://github.com/hackdaymanifesto/hackdaymanifesto.github.com/">forking</a>, adding your name, and making a pull request.</p>
+
+<p><img class="center" src="http://cristianobetta.com/images/blog/2012/thehackdaymanifesto.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A new blog]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/07/a-new-blog/"/>
+    <updated>2012-04-07T15:17:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/07/a-new-blog</id>
+    <content type="html"><![CDATA[<p>It has been a while since I last blogged, and to be fair I&#8217;ve been kinda busy, but I also was frustrated with my old blog. It was bloated and heavy to load, all mainly due to Wordpress and Site5&#8217;s shared hosting. Wordpress started as a nice blogging platform but lately it has been pissing me off (more on this), and I realised that running a whole PHP script for pages that barely ever change is stupid.</p>
+
+<!-- more -->
+
+
+<p>So here is the new blog. The old one is still available <a href="http://blog.cristianobetta.com/">here</a> as a static HTML archive (hence why it loads so fast).</p>
+
+<p>This new blog is built using <a href="http://octopress.org">Octopress</a>, which is a &#8220;blog aware static site generator&#8221;. Basically what it does is convert a whole folder of template files and blog posts written in <a href="http://daringfireball.net/projects/markdown/">MarkDown</a> into a whole folder of HTML, CSS, and Javascript. I&#8217;ve been using a few simple frameworks like <a href="http://nanoc.stoneship.org/">Nanoc</a> and <a href="https://github.com/mojombo/jekyll">Jekyll</a> for work and event management recently and I loved the speed. No database and no server side scripting results in super fast load times, combing that with the hosting on <a href="http://pages.github.com">Github</a> (see here to learn how to do this yourself) makes it even faster.</p>
+
+<p>But let&#8217;s quit talking about the technical details of my blog, or maybe not. I definitely want to share some more techie things here, highlight some of the code I personally write, workflows we use at <a href="http://emberads.com/">EmberAds</a>, and software I love using. Although it&#8217;s fun to blog about anything at random, I rather make this blog a bit more topical (hence the cheesy title).</p>
+]]></content>
+  </entry>
+  
+</feed>

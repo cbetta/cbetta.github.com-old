@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reading | Cristiano Betta &middot; Blog]]></title>
+  <link href="http://cristianobetta.com/blog/categories/reading/atom.xml" rel="self"/>
+  <link href="http://cristianobetta.com/"/>
+  <updated>2014-08-15T11:41:48+01:00</updated>
+  <id>http://cristianobetta.com/</id>
+  <author>
+    <name><![CDATA[Cristiano Betta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list - Week 40]]></title>
+    <link href="http://cristianobetta.com/blog/2013/10/05/reading-list-week-40/"/>
+    <updated>2013-10-05T17:00:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/10/05/reading-list-week-40</id>
+    <content type="html"><![CDATA[<h3><a href="http://github.com/ukiepc2013">UK IEPC 2013</a></h3>
+
+<p>I decided to drop by the <a href="http://www.cs.nott.ac.uk/~mlw/ukiepc/2013/">UKIEPC</a> at Nottingham University today and they offered me to enter as a visitor. I used to do these programming competitions when I was in uni with Melinda and Reinier (go Team OLF!) so it was a bit of nostalgia to be able to participate again. I ended up leading the board for a bit in Nottingham but eventually <a href="https://ukiepc13.contest.scrool.se/standings/">ended up 2nd, and 22nd on the UK standings</a>. Only downside: Ruby wasn't an allowed language so I had to brush up my Python skills.</p>
+
+<h3><a href="https://www.petekeen.net/dry-your-rails-crud-with-simple-form-and-inherited-resources">DRY up your CRUD</a></h3>
+
+<p>I really love the idea of the <a href="https://github.com/josevalim/inherited_resources">Inherited Resources</a> gem in this article to clean up standard CRUD code. I'm tempted to try this in a project I'm working on at the moment in combination with <a href="https://github.com/ryanb/cancan">cancan</a>.</p>
+
+<h3><a href="http://12factor.net/">The Twelve Factor App</a></h3>
+
+<p>I've been starting to get the hang of app deployment lately. I have access to the internal <a href="http://www.openstack.org/">OpenStack</a> platform at eBay and have written a few modules to handle deployment for my Rails apps. I keep going back to this site to challenge myself to answer the question: what would be the right way to do this?</p>
+
+<h3><a href="http://gistflow.com/posts/901-sandi_meter-tool-for-checking-sandi-metz-rules">sandi_meter gem</a></h3>
+
+<p>Apparently Sandi Metz recently talked about her seemingly arbitrary but pretty sensible standards for maintaining clean, manageable and readable code. It's one of those basic heuristics that helps you identify code smell. It has now been turned into a gem by Anatoli Makarevich and will join my list of handy code sanitation tools.</p>
+
+<h3><a href="https://konklone.com/post/switch-to-https-now-for-free">Switch to HTTPS for free</a></h3>
+
+<p>Getting an SSL certificate can be expensive but apparently using <a href="https://www.startssl.com/">StartSSL</a> you can now get your own for free for personal use. Sadly <a href="http://pages.github.com/">Github pages</a> doesn't support SSL so I won't be switching this site any day soon, but I will keep it in mind if I ever change hosting.</p>
+
+<h3><a href="http://semantic-ui.com/">Semantic UI</a></h3>
+
+<p>I am not a great fan of Twitter Bootstrap. It somehow seems to breed divs and everything made in it looks like Twitter Bootstrap. This framework looks to be a bit cleaner and I like the look. Now don't all go use it or I will get sick of this one pretty quickly too.</p>
+
+<h3><a href="http://www.ruby.or.jp/en/news/20130924.html">ruby-lang.org design contest</a></h3>
+
+<p>I've never really liked the Ruby website (<a href="http://rubylang.org">ruby-lang.org</a>) so it is good to see a competition to find a new design. I'm not sure about the whole free labour implications in this but I think there are plenty of passionate Ruby devs wiling to put in an entry just to give back to the community.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list - Week 38]]></title>
+    <link href="http://cristianobetta.com/blog/2013/09/20/reading-list-week-38/"/>
+    <updated>2013-09-20T00:40:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2013/09/20/reading-list-week-38</id>
+    <content type="html"><![CDATA[<p>I thought I'd get back into blogging again so let's start with a simple reading list. Here's some articles that have kept me busy over the past week and I'd think people ight enjoy.</p>
+
+<ul>
+<li>Pete Keen has a short list of <a href="http://www.petekeen.net/essential-tools-for-starting-a-rails-app-in-2013">Essential Tools for Starting a Rails App in 2013</a>. I knew most of them but there were a few I didn't yet.</li>
+<li>Lindsey Bieda has a nice article explaining how to add a <a href="http://rarlindseysmash.com/posts/config-and-generators-in-gems">nice configuration method and generator</a> to your Ruby Gem. I need to add this to my next Gem.</li>
+<li>The great guys at GlobalDev are doing a series of RubyTips. As a big proponent for short, concise and well structured code I think there's a few amazing gems (no pun intended) in there. (<a href="http://globaldev.co.uk/2013/09/ruby-tips-part-1/">Part 1</a>, <a href="http://globaldev.co.uk/2013/09/ruby-tips-part-2/">Part 2</a>)</li>
+<li>My colleague Tim has been working on a series explaining how to use the new REST APIs in NodeJS. The firs 2 parts are available now (<a href="https://devblog.paypal.com/building-a-node-and-paypal-app/">Part 1</a>, <a href="https://devblog.paypal.com/building-a-web-app-with-node-js-the-paypal-sdk-part-2/">Part 2</a>). I need to do this myself to get the hang of NodeJS a bit more.</li>
+<li><a href="http://crystal-lang.org/">Crystal</a> is a Ruby-like language that compiles down to C. Sounds to good to be true and I need to play with this stat!</li>
+<li>There is now an app to teach you <a href="http://iconoclastlabs.github.io/rubytrivia/">arbitrary Ruby trivia</a>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

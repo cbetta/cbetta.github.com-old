@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: information | Cristiano Betta &middot; Blog]]></title>
+  <link href="http://cristianobetta.com/blog/categories/information/atom.xml" rel="self"/>
+  <link href="http://cristianobetta.com/"/>
+  <updated>2014-08-15T11:41:48+01:00</updated>
+  <id>http://cristianobetta.com/</id>
+  <author>
+    <name><![CDATA[Cristiano Betta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A look back at 2012]]></title>
+    <link href="http://cristianobetta.com/blog/2013/01/08/lookback-at-2012/"/>
+    <updated>2013-01-08T22:10:00+00:00</updated>
+    <id>http://cristianobetta.com/blog/2013/01/08/lookback-at-2012</id>
+    <content type="html"><![CDATA[<p>With all the new years resolutions out of the way I want to share what (programming) skills I learned or revisited in 2012.</p>
+
+<p>This will be more positive than looking back in a year and counting the things I promised but didn't do.</p>
+
+<h2>Programming skills</h2>
+
+<h4>Advanced Ruby</h4>
+
+<p>I knew Ruby already, but it always was a very "Rails" type of Ruby. Working with <a href="http://caius.name/">Caius</a> and <a href="http://www.linkedin.com/in/rahoulbaruah">Baz</a> at <a href="http://emberads.com">EmberAds</a> has brought this to a whole new level though. Writing modules, writing gems, extending classes, applying best practices, etc, all of those can seem daunting at first but they are oh so useful.</p>
+
+<p>It also has had a great effect on my proficiency in Rails.</p>
+
+<blockquote><p>You can spot a good Rails programmer by their number of regular Ruby objects in their codebase</p></blockquote>
+
+<p>I don't remember who said this but it really has started to ring truth to me in the past year. The Rails community has lately been alight with discussions about DCI, Concerns, Service Objects, Delegation and other ways of moving more and more code out of controller and models and into regular Ruby objects.</p>
+
+<h4>Testing code using RSpec</h4>
+
+<p>Learning to write tests has always been at the top of my list of things to learn but I somehow never got to it. Luckily Caius and Baz wouldn't allow any code to go untested and it soon became a much loved practice. It is a hard skill to master though so I don't blame my past self.</p>
+
+<p>I think it's a skill best learned by example and from a colleague. I still feel like I'm learning more and more about the intricate aspects though as it's relatively easy to write a test that tests too much or too little. We'll see where I am at the end of 2013.</p>
+
+<!-- more -->
+
+
+<h4>Server deployment with Puppet</h4>
+
+<p>I used to love <a href="http://heroku.com">Heroku</a> but it has its issues. Most importantly to me is the relative high cost of doing anything asynchronously in the background (e.g. using <a href="https://github.com/defunkt/resque">Resque</a>). I always wanted to setup my own server but the last time I did this was ages ago and I had lost all the skills I had build up.</p>
+
+<p>So this time I started over using <a href="http://puppetlabs.com/">Puppet</a>. Like I said in my <a href="http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet/">previous post</a>, I'm not 100% sure if I like Puppet but it does do the job for now and has allowed for me to have a repeatable setup for Rails apps, allowing me to deploy a new Rails app (often a simple hack) within minutes (just like on Heroku).</p>
+
+<h4>Machine learning, algorithms, databases</h4>
+
+<p>Algorithms and AI already was a lot of fun at university but at EmberAds I finally got to apply a lot of that knowledge again.</p>
+
+<p>So what lessons did I learn? Here are some:</p>
+
+<ul>
+<li>Not all databases are the same</li>
+<li>counting can be slow (on postgres)</li>
+<li>Redis is FAST</li>
+<li>bloom filters are FASTER</li>
+<li>VPS's are expensive when all you need is memory</li>
+</ul>
+
+
+<p>I really want to look at more specific databases and focus on honing my map-reduce skills in 2013.</p>
+
+<h4>Writing iOS Apps</h4>
+
+<p>Melinda and I have had an idea for a mobile app for a while and we both had tried to take up iOS development but we never never really got into it. In 2012 we found that <a href="http://www.raywenderlich.com/store/ios-apprentice">The iOS Apprentice</a> was the tutorial we were looking for and have finally started making progress to get our app out there.</p>
+
+<h4>Working remotely in a team on 1 project</h4>
+
+<p>One of the more subtle but definitely biggest changes last year was working in a passionate team on 1 project. I realise now that in the past few years I had rarely worked on 1 project with multiple developers. I know this might seem normal to some, but as a freelancer I've always worked with others but rarely many other developers, and in my time at Nudge we were mostly all working on different projects. It has been a real breeze being able to be in a team where everyone can pick up any bit of the code and improve or extend it and rely on everyone else to keep them to the same standards they would keep the other.</p>
+
+<p><a href="http://campfirenow.com/">Campfire</a>, <a href="http://github.com">Github</a>, and <a href="http://dropbox.com">DropBox</a> have been our big friends in 2012.</p>
+
+<h2>Non programming skills</h2>
+
+<h4>Running</h4>
+
+<p>Apologies to my friends on Twitter and Facebook for spamming them every other day to tell them I ran another X kilometres, but the truth is simple: sharing my progress helps to motivate me. Tracking and talking about your health seems to be a real factor in keeping the progress going.</p>
+
+<p>Sadly I hurt my knee just after being able to hit a regular 5km. I now changed my training to prepare for a triathlon. I might even actually do one in 2013 as a sprint-relay with Kevin and Ruth. I would love to do a full sprint triathlon in 2013, but like I said, I wasn't going to make any resolutions.</p>
+
+<h4>Driving</h4>
+
+<p>After years of postponing I finally did it and got my license. Sadly driving is really expensive for a new driver in London, and driving a rental isn't an option either.</p>
+
+<p>The plan is to sell the current car in August and move on to something like ZipCar. I did the math and it's quite simple: my usage is so low that I can even rent quite a nice car for a week every so often to head to The Netherlands, and still come out with money saved.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tech on my radar]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/"/>
+    <updated>2012-04-19T23:19:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar</id>
+    <content type="html"><![CDATA[<p>Here are just some interesting gems and other software that have caught my attention recently:</p>
+
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> makes it easy to use zshell as a replacement for bash on OS X. It is very easy to install and comes with a whole bunch of useful plugins. I've only really dived half into it but already feel like it's been making my console better. I personally love how it shows the Git branch I'm working on at the moment.</li>
+<li><a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom Filters</a> are a very cool way of doing a quick and space efficient lookup if an item exists in a set. It's used by databases and caches, and Google uses it for their Save Browsing service. There's some cool <a href="https://github.com/igrigorik/bloomfilter-rb">ruby gems</a> that make it easy to use them and I already have an idea where to deploy them next.</li>
+<li><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How Github uses Github</a> is pretty much how we use Github at EmberAds. The more we do it the more I see the benefits especially:
+
+<ul>
+<li>We work asynchronously</li>
+<li>We use the hell out of Campfire</li>
+<li>Master is always deployable</li>
+<li>Pull Requests are our code reviews, requests for comments, and discussion boards.</li>
+<li>Other apps have great features like prioritising stuff. But honestly, we have barely touched BaseCamp in weeks.</li>
+</ul>
+</li>
+<li><a href="https://github.com/EmberAds/cuuid">Fast UUID generation</a> is something we needed at EmberAds seeing as we use UUIDs everywhere and most of the Ruby gems were rather slow.    <a href="http://caius.name">Caius</a> cooked up a Ruby gem that uses a native C library which in our simple benchmarks spit out UUIDs about 6x faster.</li>
+<li>On that note, <a href="https://github.com/EmberAds/acts_as_uuid">acts_as_uuid</a> is what we use to store UUIDs on our models in Postgres.</li>
+<li><a href="https://github.com/ondrejbartas/rake-progressbar">Rake progressbar</a> makes it easier for me to understand if I can go and make a brew or not when some of my rake tasks are running.</li>
+<li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I've been working on a blog post on this, mainly to inspire regular bloggers that you don't need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A new blog]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/07/a-new-blog/"/>
+    <updated>2012-04-07T15:17:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/07/a-new-blog</id>
+    <content type="html"><![CDATA[<p>It has been a while since I last blogged, and to be fair I've been kinda busy, but I also was frustrated with my old blog. It was bloated and heavy to load, all mainly due to Wordpress and Site5's shared hosting. Wordpress started as a nice blogging platform but lately it has been pissing me off (more on this), and I realised that running a whole PHP script for pages that barely ever change is stupid.</p>
+
+<!-- more -->
+
+
+<p>So here is the new blog. The old one is still available <a href="http://blog.cristianobetta.com/">here</a> as a static HTML archive (hence why it loads so fast).</p>
+
+<p>This new blog is built using <a href="http://octopress.org">Octopress</a>, which is a "blog aware static site generator". Basically what it does is convert a whole folder of template files and blog posts written in <a href="http://daringfireball.net/projects/markdown/">MarkDown</a> into a whole folder of HTML, CSS, and Javascript. I've been using a few simple frameworks like <a href="http://nanoc.stoneship.org/">Nanoc</a> and <a href="https://github.com/mojombo/jekyll">Jekyll</a> for work and event management recently and I loved the speed. No database and no server side scripting results in super fast load times, combing that with the hosting on <a href="http://pages.github.com">Github</a> (see here to learn how to do this yourself) makes it even faster.</p>
+
+<p>But let's quit talking about the technical details of my blog, or maybe not. I definitely want to share some more techie things here, highlight some of the code I personally write, workflows we use at <a href="http://emberads.com/">EmberAds</a>, and software I love using. Although it's fun to blog about anything at random, I rather make this blog a bit more topical (hence the cheesy title).</p>
+]]></content>
+  </entry>
+  
+</feed>
