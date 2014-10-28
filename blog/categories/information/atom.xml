@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: information | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/information/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/information/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A look back at 2012]]></title>
-    <link href="http://cristianobetta.com/blog/2013/01/08/lookback-at-2012/"/>
+    <link href="http://cbetta.github.com/blog/2013/01/08/lookback-at-2012/"/>
     <updated>2013-01-08T22:10:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2013/01/08/lookback-at-2012</id>
+    <id>http://cbetta.github.com/blog/2013/01/08/lookback-at-2012</id>
     <content type="html"><![CDATA[<p>With all the new years resolutions out of the way I want to share what (programming) skills I learned or revisited in 2012.</p>
 
 <p>This will be more positive than looking back in a year and counting the things I promised but didn't do.</p>
@@ -94,9 +94,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tech on my radar]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/19/tech-on-my-radar/"/>
     <updated>2012-04-19T23:19:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar</id>
+    <id>http://cbetta.github.com/blog/2012/04/19/tech-on-my-radar</id>
     <content type="html"><![CDATA[<p>Here are just some interesting gems and other software that have caught my attention recently:</p>
 
 <ul>
@@ -123,9 +123,9 @@
   
   <entry>
     <title type="html"><![CDATA[A new blog]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/07/a-new-blog/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/07/a-new-blog/"/>
     <updated>2012-04-07T15:17:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/07/a-new-blog</id>
+    <id>http://cbetta.github.com/blog/2012/04/07/a-new-blog</id>
     <content type="html"><![CDATA[<p>It has been a while since I last blogged, and to be fair I've been kinda busy, but I also was frustrated with my old blog. It was bloated and heavy to load, all mainly due to Wordpress and Site5's shared hosting. Wordpress started as a nice blogging platform but lately it has been pissing me off (more on this), and I realised that running a whole PHP script for pages that barely ever change is stupid.</p>
 
 <!-- more -->

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: login | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/login/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/login/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -14,19 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Using Login with Slack as an Authorization Layer]]></title>
-    <link href="http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack/"/>
-    <updated>2014-08-15T11:38:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Integrating Log In With PayPal into Rails]]></title>
-    <link href="http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
+    <link href="http://cbetta.github.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
     <updated>2013-09-27T08:00:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
+    <id>http://cbetta.github.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
     <content type="html"><![CDATA[<p>Earlier this year PayPal launched the new <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/">Log In with PayPal</a> experience worldwide. Integrating it into Rails is very straightforward with the help of <a href="https://github.com/intridea/omniauth">Omniauth</a> so I thought I'd show how with a little tutorial.</p>
 
 <p><strong>Log In With PayPal</strong> is much like <strong>Log In with Twitter</strong> or <strong>Log In with Facebook</strong> but it has the cool benefit of being able to provide you some extra user information like:</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: jekyll | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/jekyll/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/jekyll/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The joy and pain of using Jekyll]]></title>
-    <link href="http://cristianobetta.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll/"/>
+    <link href="http://cbetta.github.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll/"/>
     <updated>2013-08-21T22:48:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll</id>
+    <id>http://cbetta.github.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll</id>
     <content type="html"><![CDATA[<p>I've been tempted to write a bit about Static Site Generators (SSGs) for a while now, mainly because I love them. I've been using (Jekyll)[http://jekyllrb.com/] for various projects for a while now and I love it. The simplified hosting, higher security, and general hackability are just a few pros that make it worth it.</p>
 
 <p>But they have also pained me, and after reading <a href="http://screamingatmyscreen.com/2013/8/the-joy-and-pain-of-using-a-static-site-generator-for-private-and-client-work/">"The joy and pain of using a static site generator for private and client work"</a> I thought I'd add in my own few observations from a Jekyll perspective.</p>

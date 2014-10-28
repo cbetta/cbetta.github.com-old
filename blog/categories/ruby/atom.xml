@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ruby | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -14,19 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Using Login with Slack as an Authorization Layer]]></title>
-    <link href="http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack/"/>
-    <updated>2014-08-15T11:38:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Your mini-Heroku with Dokku and Dokkufy]]></title>
-    <link href="http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
+    <link href="http://cbetta.github.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
     <updated>2014-08-05T22:16:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
+    <id>http://cbetta.github.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
     <content type="html"><![CDATA[<p>I've always enjoyed <a href="http://heroku.com">Heroku</a> but there are plenty of reasons both monetary and practical not to use it. I always liked the deployment method through Git though.</p>
 
 <p>So this weekend at <a href="http://leedshack.org">LeedsHack</a> I started to look into <a href="https://github.com/progrium/dokku">Dokku</a>, an open source mini-Heroku powered by <a href="https://www.docker.com/">Docker</a>, <a href="https://github.com/progrium/buildstep">Buildstep</a> and some other bits that share infrastructure elements with Heroku.</p>
@@ -93,9 +84,9 @@
   
   <entry>
     <title type="html"><![CDATA[Reading list - Week 40]]></title>
-    <link href="http://cristianobetta.com/blog/2013/10/05/reading-list-week-40/"/>
+    <link href="http://cbetta.github.com/blog/2013/10/05/reading-list-week-40/"/>
     <updated>2013-10-05T17:00:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/10/05/reading-list-week-40</id>
+    <id>http://cbetta.github.com/blog/2013/10/05/reading-list-week-40</id>
     <content type="html"><![CDATA[<h3><a href="http://github.com/ukiepc2013">UK IEPC 2013</a></h3>
 
 <p>I decided to drop by the <a href="http://www.cs.nott.ac.uk/~mlw/ukiepc/2013/">UKIEPC</a> at Nottingham University today and they offered me to enter as a visitor. I used to do these programming competitions when I was in uni with Melinda and Reinier (go Team OLF!) so it was a bit of nostalgia to be able to participate again. I ended up leading the board for a bit in Nottingham but eventually <a href="https://ukiepc13.contest.scrool.se/standings/">ended up 2nd, and 22nd on the UK standings</a>. Only downside: Ruby wasn't an allowed language so I had to brush up my Python skills.</p>
@@ -128,9 +119,9 @@
   
   <entry>
     <title type="html"><![CDATA[Integrating Log In With PayPal into Rails]]></title>
-    <link href="http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
+    <link href="http://cbetta.github.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
     <updated>2013-09-27T08:00:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
+    <id>http://cbetta.github.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
     <content type="html"><![CDATA[<p>Earlier this year PayPal launched the new <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/">Log In with PayPal</a> experience worldwide. Integrating it into Rails is very straightforward with the help of <a href="https://github.com/intridea/omniauth">Omniauth</a> so I thought I'd show how with a little tutorial.</p>
 
 <p><strong>Log In With PayPal</strong> is much like <strong>Log In with Twitter</strong> or <strong>Log In with Facebook</strong> but it has the cool benefit of being able to provide you some extra user information like:</p>
@@ -297,9 +288,9 @@
   
   <entry>
     <title type="html"><![CDATA[Reading list - Week 38]]></title>
-    <link href="http://cristianobetta.com/blog/2013/09/20/reading-list-week-38/"/>
+    <link href="http://cbetta.github.com/blog/2013/09/20/reading-list-week-38/"/>
     <updated>2013-09-20T00:40:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/09/20/reading-list-week-38</id>
+    <id>http://cbetta.github.com/blog/2013/09/20/reading-list-week-38</id>
     <content type="html"><![CDATA[<p>I thought I'd get back into blogging again so let's start with a simple reading list. Here's some articles that have kept me busy over the past week and I'd think people ight enjoy.</p>
 
 <ul>
@@ -310,6 +301,20 @@
 <li><a href="http://crystal-lang.org/">Crystal</a> is a Ruby-like language that compiles down to C. Sounds to good to be true and I need to play with this stat!</li>
 <li>There is now an app to teach you <a href="http://iconoclastlabs.github.io/rubytrivia/">arbitrary Ruby trivia</a>.</li>
 </ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to run apt-get update before Puppet]]></title>
+    <link href="http://cbetta.github.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/"/>
+    <updated>2013-02-05T14:56:00+00:00</updated>
+    <id>http://cbetta.github.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet</id>
+    <content type="html"><![CDATA[<p>One of the problems I keep running into with Puppet is that the packages I'm trying to install are very new and I need to run <code>apt-get update</code> to update the repositories. Because Puppet does not run scripts it gets rather annoying to get the update to run before you install any packages.</p>
+
+<p>I found a lot of solutions around the web but this one seems to work best for me.</p>
+
+<script src="https://gist.github.com/cbetta/4714469.js"></script>
 
 ]]></content>
   </entry>

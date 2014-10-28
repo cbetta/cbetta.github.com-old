@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: gem | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/gem/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/gem/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Your mini-Heroku with Dokku and Dokkufy]]></title>
-    <link href="http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
+    <link href="http://cbetta.github.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
     <updated>2014-08-05T22:16:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
+    <id>http://cbetta.github.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
     <content type="html"><![CDATA[<p>I've always enjoyed <a href="http://heroku.com">Heroku</a> but there are plenty of reasons both monetary and practical not to use it. I always liked the deployment method through Git though.</p>
 
 <p>So this weekend at <a href="http://leedshack.org">LeedsHack</a> I started to look into <a href="https://github.com/progrium/dokku">Dokku</a>, an open source mini-Heroku powered by <a href="https://www.docker.com/">Docker</a>, <a href="https://github.com/progrium/buildstep">Buildstep</a> and some other bits that share infrastructure elements with Heroku.</p>

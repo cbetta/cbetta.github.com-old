@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: gems | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/gems/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/gems/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby gems are still not safe to use]]></title>
-    <link href="http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use/"/>
+    <link href="http://cbetta.github.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use/"/>
     <updated>2013-02-02T13:24:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use</id>
+    <id>http://cbetta.github.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use</id>
     <content type="html"><![CDATA[<p>In the light of the recent <a href="http://rubygems.org">Rubygems.org</a> security compromise the community has been looking at ways to make Rubygems.org and Ruby gems in general more secure. The project is still ongoing and feel free to help them out on #rubygems on Freenode, but here is a highlight of what I think are some of the main issues.</p>
 
 <p>Some of the issues highlighted here are taken from <a href="http://www.youtube.com/watch?v=z-5bO0Q1J9s">Ben Smith's enlightening (but scary) talk at Aloha Ruby Conference</a>.</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mobile | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/mobile/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/mobile/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[On PhoneGap/Cordova and cross platform mobile development]]></title>
-    <link href="http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development/"/>
+    <link href="http://cbetta.github.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development/"/>
     <updated>2012-06-04T12:34:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development</id>
+    <id>http://cbetta.github.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development</id>
     <content type="html"><![CDATA[<p>So last weekend I was at <a href="http://overtheair.org/">Over The Air 2012</a> - on of my favorite regular Hack days - and for the first time I decided to actually try and make a "native" mobile app.</p>
 
 <p>Seeing as I don't want to have to redo the app for every platform I decided to try out one of the more famous cross platform development frameworks: <a href="http://phonegap.com/">PhoneGap</a>.</p>

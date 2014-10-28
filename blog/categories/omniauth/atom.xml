@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: omniauth | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/omniauth/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/omniauth/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Add terms & conditions validation to Omniauth Identity]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/"/>
     <updated>2012-04-12T00:32:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity</id>
+    <id>http://cbetta.github.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity</id>
     <content type="html"><![CDATA[<div class="entry-content"><p><a href="https://github.com/intridea/omniauth-identity">Omniauth Identity</a> is a great identity provide that shipped with Omniauth 1.0 it can be a bit simple at times. I wanted to add a simple terms and conditions check on signup to my registration form and this is what I came up with.</p>
 
 <p>For this example I assume you already have a Omniauth Identity setup much like explained in <a href="http://railscasts.com/episodes/304-omniauth-identity">this Railscast</a>.</p>

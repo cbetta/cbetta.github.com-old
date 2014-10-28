@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -14,19 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Using Login with Slack as an Authorization Layer]]></title>
-    <link href="http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack/"/>
-    <updated>2014-08-15T11:38:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2014/08/15/a-little-trick-for-using-login-with-slack</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Your mini-Heroku with Dokku and Dokkufy]]></title>
-    <link href="http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
+    <link href="http://cbetta.github.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy/"/>
     <updated>2014-08-05T22:16:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
+    <id>http://cbetta.github.com/blog/2014/08/05/your-mini-heroku-with-dokku-and-dokkufy</id>
     <content type="html"><![CDATA[<p>I&#8217;ve always enjoyed <a href="http://heroku.com">Heroku</a> but there are plenty of reasons both monetary and practical not to use it. I always liked the deployment method through Git though.</p>
 
 <p>So this weekend at <a href="http://leedshack.org">LeedsHack</a> I started to look into <a href="https://github.com/progrium/dokku">Dokku</a>, an open source mini-Heroku powered by <a href="https://www.docker.com/">Docker</a>, <a href="https://github.com/progrium/buildstep">Buildstep</a> and some other bits that share infrastructure elements with Heroku.</p>
@@ -52,7 +43,7 @@
 
 <p>Open up your server&#8217;s domain or IP in a browser and voila!</p>
 
-<p><img src="http://cristianobetta.com/images/blog/2014/nginx.png" alt="Nginx" /></p>
+<p><img src="http://cbetta.github.com/images/blog/2014/nginx.png" alt="Nginx" /></p>
 
 <h3>Part 2a: Dokkufying your app</h3>
 
@@ -93,9 +84,9 @@
   
   <entry>
     <title type="html"><![CDATA[Reading list - Week 40]]></title>
-    <link href="http://cristianobetta.com/blog/2013/10/05/reading-list-week-40/"/>
+    <link href="http://cbetta.github.com/blog/2013/10/05/reading-list-week-40/"/>
     <updated>2013-10-05T17:00:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/10/05/reading-list-week-40</id>
+    <id>http://cbetta.github.com/blog/2013/10/05/reading-list-week-40</id>
     <content type="html"><![CDATA[<h3><a href="http://github.com/ukiepc2013">UK IEPC 2013</a></h3>
 
 <p>I decided to drop by the <a href="http://www.cs.nott.ac.uk/~mlw/ukiepc/2013/">UKIEPC</a> at Nottingham University today and they offered me to enter as a visitor. I used to do these programming competitions when I was in uni with Melinda and Reinier (go Team OLF!) so it was a bit of nostalgia to be able to participate again. I ended up leading the board for a bit in Nottingham but eventually <a href="https://ukiepc13.contest.scrool.se/standings/">ended up 2nd, and 22nd on the UK standings</a>. Only downside: Ruby wasn&#8217;t an allowed language so I had to brush up my Python skills.</p>
@@ -128,9 +119,9 @@
   
   <entry>
     <title type="html"><![CDATA[Integrating Log In With PayPal into Rails]]></title>
-    <link href="http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
+    <link href="http://cbetta.github.com/blog/2013/09/27/integrating-login-with-paypal-into-rails/"/>
     <updated>2013-09-27T08:00:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
+    <id>http://cbetta.github.com/blog/2013/09/27/integrating-login-with-paypal-into-rails</id>
     <content type="html"><![CDATA[<p>Earlier this year PayPal launched the new <a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/">Log In with PayPal</a> experience worldwide. Integrating it into Rails is very straightforward with the help of <a href="https://github.com/intridea/omniauth">Omniauth</a> so I thought I&#8217;d show how with a little tutorial.</p>
 
 <p><strong>Log In With PayPal</strong> is much like <strong>Log In with Twitter</strong> or <strong>Log In with Facebook</strong> but it has the cool benefit of being able to provide you some extra user information like:</p>
@@ -296,71 +287,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[PayPal Seamless Checkout with Rails]]></title>
-    <link href="http://cristianobetta.com/blog/2013/09/25/paypal-seamless-checkout-with-rails/"/>
-    <updated>2013-09-25T12:00:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/09/25/paypal-seamless-checkout-with-rails</id>
-    <content type="html"><![CDATA[<p>Continuing from previous post.</p>
-
-<h1>Enable Seamless Checkout</h1>
-
-<ul>
-<li>Login to <a href="http://developer.paypal.com">developer.paypal.com</a></li>
-<li>Go to <strong>Applications</strong></li>
-<li>Select your application from the list</li>
-<li>Scroll down to <strong>Login With PayPal</strong></li>
-<li>Check <strong>Use Seamless Checkout</strong></li>
-<li>Scroll back up and hit <strong>Save</strong></li>
-<li>Also make sure <strong>Accept Payments</strong> is turned on (we turned that off in the last post).</li>
-</ul>
-
-
-<h1>Update OmniAuth to use Seamless Checkout</h1>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Rails</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span> <span class="no">OmniAuth</span><span class="o">::</span><span class="no">Builder</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">provider</span> <span class="ss">:paypal</span><span class="p">,</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="n">scope</span><span class="p">:</span> <span class="s2">&quot;openid email profile https://uri.paypal.com/services/expresscheckout&quot;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>Make a payment</h1>
-
-<p>Add the PayPal SDK to your Gemfile</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paypal-sdk-rest&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now make a new initializer in <code>config/initializers/paypal.rb</code> to configure PayPal.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">PayPal</span><span class="o">::</span><span class="no">SDK</span><span class="o">::</span><span class="no">REST</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
-</span><span class='line'>    <span class="ss">:mode</span> <span class="o">=&gt;</span> <span class="ss">:sandbox</span><span class="p">,</span>  <span class="c1"># Set :sandbox or :live</span>
-</span><span class='line'>    <span class="ss">:client_id</span>     <span class="o">=&gt;</span> <span class="s2">&quot;CLIENT_ID&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="ss">:client_secret</span> <span class="o">=&gt;</span> <span class="s2">&quot;CLIENT_SECRET&quot;</span> <span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Create a PaymentsController to prepare and setup the payment.</p>
-
-<p>&#8220;`ruby</p>
-
-<p>&#8220;`</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Reading list - Week 38]]></title>
-    <link href="http://cristianobetta.com/blog/2013/09/20/reading-list-week-38/"/>
+    <link href="http://cbetta.github.com/blog/2013/09/20/reading-list-week-38/"/>
     <updated>2013-09-20T00:40:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/09/20/reading-list-week-38</id>
+    <id>http://cbetta.github.com/blog/2013/09/20/reading-list-week-38</id>
     <content type="html"><![CDATA[<p>I thought I&#8217;d get back into blogging again so let&#8217;s start with a simple reading list. Here&#8217;s some articles that have kept me busy over the past week and I&#8217;d think people ight enjoy.</p>
 
 <ul>
@@ -377,9 +307,9 @@
   
   <entry>
     <title type="html"><![CDATA[The joy and pain of using Jekyll]]></title>
-    <link href="http://cristianobetta.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll/"/>
+    <link href="http://cbetta.github.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll/"/>
     <updated>2013-08-21T22:48:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll</id>
+    <id>http://cbetta.github.com/blog/2013/08/21/the-joy-and-pain-of-using-jekyll</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been tempted to write a bit about Static Site Generators (SSGs) for a while now, mainly because I love them. I&#8217;ve been using (Jekyll)[http://jekyllrb.com/] for various projects for a while now and I love it. The simplified hosting, higher security, and general hackability are just a few pros that make it worth it.</p>
 
 <p>But they have also pained me, and after reading <a href="http://screamingatmyscreen.com/2013/8/the-joy-and-pain-of-using-a-static-site-generator-for-private-and-client-work/">&#8220;The joy and pain of using a static site generator for private and client work&#8221;</a> I thought I&#8217;d add in my own few observations from a Jekyll perspective.</p>
@@ -444,9 +374,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[How to run apt-get update before Puppet]]></title>
-    <link href="http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/"/>
+    <link href="http://cbetta.github.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/"/>
     <updated>2013-02-05T14:56:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet</id>
+    <id>http://cbetta.github.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet</id>
     <content type="html"><![CDATA[<p>One of the problems I keep running into with Puppet is that the packages I&#8217;m trying to install are very new and I need to run <code>apt-get update</code> to update the repositories. Because Puppet does not run scripts it gets rather annoying to get the update to run before you install any packages.</p>
 
 <p>I found a lot of solutions around the web but this one seems to work best for me.</p>
@@ -458,9 +388,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[Ruby gems are still not safe to use]]></title>
-    <link href="http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use/"/>
+    <link href="http://cbetta.github.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use/"/>
     <updated>2013-02-02T13:24:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use</id>
+    <id>http://cbetta.github.com/blog/2013/02/02/ruby-gems-are-not-safe-to-use</id>
     <content type="html"><![CDATA[<p>In the light of the recent <a href="http://rubygems.org">Rubygems.org</a> security compromise the community has been looking at ways to make Rubygems.org and Ruby gems in general more secure. The project is still ongoing and feel free to help them out on #rubygems on Freenode, but here is a highlight of what I think are some of the main issues.</p>
 
 <p>Some of the issues highlighted here are taken from <a href="http://www.youtube.com/watch?v=z-5bO0Q1J9s">Ben Smith&#8217;s enlightening (but scary) talk at Aloha Ruby Conference</a>.</p>
@@ -514,9 +444,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[A look back at 2012]]></title>
-    <link href="http://cristianobetta.com/blog/2013/01/08/lookback-at-2012/"/>
+    <link href="http://cbetta.github.com/blog/2013/01/08/lookback-at-2012/"/>
     <updated>2013-01-08T22:10:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2013/01/08/lookback-at-2012</id>
+    <id>http://cbetta.github.com/blog/2013/01/08/lookback-at-2012</id>
     <content type="html"><![CDATA[<p>With all the new years resolutions out of the way I want to share what (programming) skills I learned or revisited in 2012.</p>
 
 <p>This will be more positive than looking back in a year and counting the things I promised but didn&#8217;t do.</p>
@@ -593,9 +523,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[Hacks/Products - A discussion on responsibility]]></title>
-    <link href="http://cristianobetta.com/blog/2012/11/12/hacks-products-a-discussion-on-responsibility/"/>
+    <link href="http://cbetta.github.com/blog/2012/11/12/hacks-products-a-discussion-on-responsibility/"/>
     <updated>2012-11-12T17:35:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2012/11/12/hacks-products-a-discussion-on-responsibility</id>
+    <id>http://cbetta.github.com/blog/2012/11/12/hacks-products-a-discussion-on-responsibility</id>
     <content type="html"><![CDATA[<p><strong>&lt;TL;DR></strong></p>
 
 <p>Who is responsible for developing a hack beyond a hack day? Is it just the developer or should the sponsors and organisers be setting a right framework? If Open Sourcing a hack is not enough, what then? What do you think? Let me know in the comments.</p>
@@ -634,9 +564,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[Some notes on Puppet]]></title>
-    <link href="http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet/"/>
+    <link href="http://cbetta.github.com/blog/2012/11/12/some-notes-on-puppet/"/>
     <updated>2012-11-12T16:40:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet</id>
+    <id>http://cbetta.github.com/blog/2012/11/12/some-notes-on-puppet</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been playing with <a href="http://puppetlabs.com/">Puppet</a> recently in order to finally teach myself a bit about server management. I decided for Puppet because&#8230; well&#8230; I didn&#8217;t have time to play with <a href="http://www.opscode.com/chef/">Chef</a> yet.</p>
 
 <p>I can&#8217;t show any of my code because it contains some stuff I&#8217;d rather not open up, but here are some of my global notes on Puppet that I wanted to share.</p>
@@ -673,9 +603,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[On PhoneGap/Cordova and cross platform mobile development]]></title>
-    <link href="http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development/"/>
+    <link href="http://cbetta.github.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development/"/>
     <updated>2012-06-04T12:34:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development</id>
+    <id>http://cbetta.github.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development</id>
     <content type="html"><![CDATA[<p>So last weekend I was at <a href="http://overtheair.org/">Over The Air 2012</a> - on of my favorite regular Hack days - and for the first time I decided to actually try and make a &#8220;native&#8221; mobile app.</p>
 
 <p>Seeing as I don&#8217;t want to have to redo the app for every platform I decided to try out one of the more famous cross platform development frameworks: <a href="http://phonegap.com/">PhoneGap</a>.</p>
@@ -710,9 +640,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[OpenCodeCamp - Where the best of HackDays and BarCamps come together]]></title>
-    <link href="http://cristianobetta.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together/"/>
+    <link href="http://cbetta.github.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together/"/>
     <updated>2012-05-08T12:18:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together</id>
+    <id>http://cbetta.github.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together</id>
     <content type="html"><![CDATA[<h3>tl;dr</h3>
 
 <p>I want to run a new kind of event: <strong>OpenCodeCamp</strong> (working title). OpenCodeCamp should be an event that promotes knowledge sharing and skills swapping amongst developers of any age or level of experience. It should be free of commercialism, competition, sexism, racism, age-ism and accessible to developers of any seniority.</p>
@@ -724,7 +654,7 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
 
 <h3>Where did this come from?</h3>
 
-<p>I love HackDays but I have some issues with where they are going as you may have noticed <a href="http://blog.cristianobetta.com/2012/01/14/the-end-of-an-era/index.html">here</a>, <a href="http://cristianobetta.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/">here</a>, and <a href="http://hackdaymanifesto.com/">here</a>. I also love BarCamps, having been to many and having organised a few, but I noticed that HackDays and BarCamps are diverging in purpose and format.</p>
+<p>I love HackDays but I have some issues with where they are going as you may have noticed <a href="http://blog.cristianobetta.com/2012/01/14/the-end-of-an-era/index.html">here</a>, <a href="http://cbetta.github.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/">here</a>, and <a href="http://hackdaymanifesto.com/">here</a>. I also love BarCamps, having been to many and having organised a few, but I noticed that HackDays and BarCamps are diverging in purpose and format.</p>
 
 <p>Our contact at <a href="http://www.city.ac.uk/">City University</a> where we ran 2 BarCamps once described BarCamps as &#8220;free learning events&#8221;. Anyone can come in and learn, and most people will do their best to teach others whatever knowledge they have. It brings together anyone interested enough in learning new things and with an open mind to share their own skills and knowledge in return.</p>
 
@@ -764,9 +694,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[What I miss about HackDays]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/"/>
     <updated>2012-04-29T17:49:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot</id>
+    <id>http://cbetta.github.com/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been attending HackDays since 2007 when I travelled to Alexandra Palace for the first <a href="http://upcoming.yahoo.com/event/173371/LONDON/London/Yahoo-BBC-Hackday-2007/Alexandra-Palace/">HackDay organised by Yahoo and the BBC</a>. I was a n00b at that time (some might say I still am, #shakesfist) and I had no idea what to build. At the time I was trying to learn how to use web frameworks and at the HackDay I got my first exposures to APIs, Django, Rails, OpenID and much more. I don&#8217;t think I made anything that weekend, but damn did I learn a lot!</p>
 
 <p>Since then we&#8217;ve come a long way; HackDays are no longer just organised by big organisations. There&#8217;s pretty much one happening every weekend (sometimes more), and they are more often than not focussed around a topic. I attended at least 20 HackDays since, and I even helped organise <a href="http://www.hackcamp.org.uk/">not 1 but 2 HackCamps</a> with <a href="http://geeksoflondon.com">GeeksOfLondon</a>.</p>
@@ -798,9 +728,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[Tech on my radar]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/19/tech-on-my-radar/"/>
     <updated>2012-04-19T23:19:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar</id>
+    <id>http://cbetta.github.com/blog/2012/04/19/tech-on-my-radar</id>
     <content type="html"><![CDATA[<p>Here are just some interesting gems and other software that have caught my attention recently:</p>
 
 <ul>
@@ -827,9 +757,9 @@ one of the most popular SSGs out there, and hence worth dicussing. Here are just
   
   <entry>
     <title type="html"><![CDATA[Add terms & conditions validation to Omniauth Identity]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/"/>
     <updated>2012-04-12T00:32:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity</id>
+    <id>http://cbetta.github.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity</id>
     <content type="html"><![CDATA[<div class="entry-content"><p><a href="https://github.com/intridea/omniauth-identity">Omniauth Identity</a> is a great identity provide that shipped with Omniauth 1.0 it can be a bit simple at times. I wanted to add a simple terms and conditions check on signup to my registration form and this is what I came up with.</p>
 
 <p>For this example I assume you already have a Omniauth Identity setup much like explained in <a href="http://railscasts.com/episodes/304-omniauth-identity">this Railscast</a>.</p>
@@ -883,24 +813,24 @@ end</code></pre></noscript></div>
   
   <entry>
     <title type="html"><![CDATA[The Hack Day Manifesto]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/10/the-hackday-manifesto/"/>
     <updated>2012-04-10T15:30:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto</id>
+    <id>http://cbetta.github.com/blog/2012/04/10/the-hackday-manifesto</id>
     <content type="html"><![CDATA[<p>One of my friends, <a href="http://artisanofcode.com/">Dan</a>, started a document called <a href="http://hackdaymanifesto.com/">&#8220;The Hack Day Manifesto&#8221;</a> on the #GeeksOfLondon IRC channel a few days back. With the help of our community we managed to update it to a full document and it&#8217;s now live.</p>
 
 <p>It&#8217;s a must read if you ever plan to run a hack day or hackathon.</p>
 
 <p>It&#8217;s already signed by quite a few hackday organisers including the GeeksOfLondon team and you can add your own name by simply <a href="https://github.com/hackdaymanifesto/hackdaymanifesto.github.com/">forking</a>, adding your name, and making a pull request.</p>
 
-<p><img class="center" src="http://cristianobetta.com/images/blog/2012/thehackdaymanifesto.png"></p>
+<p><img class="center" src="http://cbetta.github.com/images/blog/2012/thehackdaymanifesto.png"></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[A new blog]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/07/a-new-blog/"/>
+    <link href="http://cbetta.github.com/blog/2012/04/07/a-new-blog/"/>
     <updated>2012-04-07T15:17:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/07/a-new-blog</id>
+    <id>http://cbetta.github.com/blog/2012/04/07/a-new-blog</id>
     <content type="html"><![CDATA[<p>It has been a while since I last blogged, and to be fair I&#8217;ve been kinda busy, but I also was frustrated with my old blog. It was bloated and heavy to load, all mainly due to Wordpress and Site5&#8217;s shared hosting. Wordpress started as a nice blogging platform but lately it has been pissing me off (more on this), and I realised that running a whole PHP script for pages that barely ever change is stupid.</p>
 
 <!-- more -->

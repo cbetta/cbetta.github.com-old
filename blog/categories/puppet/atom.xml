@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: puppet | Cristiano Betta &middot; Blog]]></title>
-  <link href="http://cristianobetta.com/blog/categories/puppet/atom.xml" rel="self"/>
-  <link href="http://cristianobetta.com/"/>
-  <updated>2014-08-15T11:41:48+01:00</updated>
-  <id>http://cristianobetta.com/</id>
+  <link href="http://cbetta.github.com/blog/categories/puppet/atom.xml" rel="self"/>
+  <link href="http://cbetta.github.com/"/>
+  <updated>2014-10-28T11:20:41+00:00</updated>
+  <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to run apt-get update before Puppet]]></title>
-    <link href="http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/"/>
+    <link href="http://cbetta.github.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet/"/>
     <updated>2013-02-05T14:56:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet</id>
+    <id>http://cbetta.github.com/blog/2013/02/05/how-to-run-apt-get-update-before-puppet</id>
     <content type="html"><![CDATA[<p>One of the problems I keep running into with Puppet is that the packages I'm trying to install are very new and I need to run <code>apt-get update</code> to update the repositories. Because Puppet does not run scripts it gets rather annoying to get the update to run before you install any packages.</p>
 
 <p>I found a lot of solutions around the web but this one seems to work best for me.</p>
@@ -29,9 +29,9 @@
   
   <entry>
     <title type="html"><![CDATA[Some notes on Puppet]]></title>
-    <link href="http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet/"/>
+    <link href="http://cbetta.github.com/blog/2012/11/12/some-notes-on-puppet/"/>
     <updated>2012-11-12T16:40:00+00:00</updated>
-    <id>http://cristianobetta.com/blog/2012/11/12/some-notes-on-puppet</id>
+    <id>http://cbetta.github.com/blog/2012/11/12/some-notes-on-puppet</id>
     <content type="html"><![CDATA[<p>I've been playing with <a href="http://puppetlabs.com/">Puppet</a> recently in order to finally teach myself a bit about server management. I decided for Puppet because... well... I didn't have time to play with <a href="http://www.opscode.com/chef/">Chef</a> yet.</p>
 
 <p>I can't show any of my code because it contains some stuff I'd rather not open up, but here are some of my global notes on Puppet that I wanted to share.</p>
