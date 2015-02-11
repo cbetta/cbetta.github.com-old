@@ -13,6 +13,7 @@ group :development do
   gem 'rb-inotify', '~> 0.8.8'
   gem 'stringex'
   gem 'liquid', '2.2.2'
+  gem 'iconv'
 end
 
 gem 'sinatra', '1.2.6'
