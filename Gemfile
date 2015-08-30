@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
+ruby '2.2.2'
+
 group :development do
   gem 'rake'
   gem 'rack'
